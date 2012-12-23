@@ -11,9 +11,9 @@ BG_IMG_LIST.push(new bg_img('https://lh4.googleusercontent.com/-MWw7U58wmy4/UCnr
 // Portfolio tags information
 var TAGS_INFO_OBJ = new tags_info();
 TAGS_INFO_OBJ.insert_type('lang', 'LightBlue', ['C','C++','C#','Java','HTML','CSS','JS','verilog'])
-TAGS_INFO_OBJ.insert_type('field', 'LightCoral', ['web_dev','architecture','algorithm','UI','app','game'])
-TAGS_INFO_OBJ.insert_type('type', 'Khaki', ['research','project','book','patent'])
-TAGS_INFO_OBJ.insert_type('genre', 'LightGreen', ['indie','NTU'])
+TAGS_INFO_OBJ.insert_type('field', 'LightCoral', ['web_dev','architecture','UI','algorithm','game'])
+TAGS_INFO_OBJ.insert_type('type', 'Khaki', ['research','project','book'])
+TAGS_INFO_OBJ.insert_type('genre', 'LightGreen', ['indie','NTU', 'CMU'])
 
 // Randomize a background image
 var now = new Date();
@@ -245,6 +245,7 @@ $(document).ready(function(){
     refresh_portfolio_display();
     TAGS_INFO_OBJ.set_name_checked('toggle', $(this).text());
     filter_portfolio_tags($(this).text());
+    //refresh_portfolio_display();
   });
   $('#portfolio_tags_cloud .portfolio_fn').click(function(){
     collapse_portfolio(true);

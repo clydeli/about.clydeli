@@ -7,7 +7,7 @@ var portfolio_entries = [
 	meta_expansion:
 	  [ { label: "Co-Authors", content: "Chen-Mou Cheng, An-Tai Li, Song-Ming Wu" } ],
 	introduction: '',
-	tags: ["architecture", "patent", "research", "NTU"]
+	tags: ["architecture", "research", "NTU"]
 },
 {
 	md5_pid: "d64ed8a4d9795df5ec63a8a344672f7b",

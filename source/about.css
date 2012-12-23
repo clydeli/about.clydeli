@@ -112,8 +112,8 @@ article header {
 
 #portfolio_tags_cloud .portfolio_tags { margin: 6px 0 12px;}
 #portfolio_tags_cloud .portfolio_tags li{ cursor: pointer;}
-#portfolio_tags_cloud #portfolio_tag_fns { margin: -12px 0 12px;}
-#portfolio_tags_cloud #portfolio_tag_fns li{ display: inline; line-height: 24px;}
+#portfolio_tag_fns { margin: -12px 0 12px;}
+#portfolio_tag_fns li{ display: inline; line-height: 24px;}
 
 .portfolio { float:left; width: 160px; min-height: 214px; margin: 16px 0 16px 16px;}
 .portfolio_fn { background-color: #aaa; border-radius: 1px; opacity: 0.8; cursor: pointer;}

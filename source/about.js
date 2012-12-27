@@ -10,31 +10,31 @@ BG_IMG_LIST.push(new bg_img('https://lh4.googleusercontent.com/-MWw7U58wmy4/UCnr
 
 // Portfolio tags information
 var TAGS_INFO_OBJ = new tags_info();
-TAGS_INFO_OBJ.insert_type('lang', 'LightBlue', ['C','C++','C#','Java','HTML','CSS','JS','verilog'])
-TAGS_INFO_OBJ.insert_type('field', 'LightCoral', ['web_dev','architecture','UI','algorithm','game'])
+TAGS_INFO_OBJ.insert_type('lang', 'LightBlue', ['C','C++','C#','Java','HTML','CSS','JS','RoR','verilog'])
+TAGS_INFO_OBJ.insert_type('field', 'LightCoral', ['web','architecture','UI','algorithm','game'])
 TAGS_INFO_OBJ.insert_type('type', 'Khaki', ['research','project','book'])
-TAGS_INFO_OBJ.insert_type('genre', 'LightGreen', ['indie','NTU', 'CMU'])
+TAGS_INFO_OBJ.insert_type('genre', 'LightGreen', ['indie','NTU', 'Intel-NTU', 'CMU'])
 
 // Randomize a background image
 var now = new Date();
 var BG_NUM = Math.floor(Math.random(now.getSeconds())*BG_IMG_LIST.length);
 
 // Portofolio collapse/expand functions
-function collapse_portfolio(is_all, p_id){
+function COLLPASE_PORTFOLIO(is_all, p_id){
   var selector = (is_all)? '.portfolio':'#p_id_'+p_id;
   $(selector).removeClass('p_expanded');
 }
-function expand_portfolio(p_id){
-  collapse_portfolio(true);
+function EXPAND_PORTFOLIO(p_id){
+  COLLPASE_PORTFOLIO(true);
   $('#p_id_'+p_id).addClass('p_expanded');
-  $('#portfolio_tags_cloud').after($('#p_id_'+p_id));
+  //$('#portfolio_tags_cloud').after($('#p_id_'+p_id)); // if move to first
   // fadeIn effect
   $('.portfolio').hide();
   $('#p_id_'+p_id).fadeIn("slow");
 }
 
 // Portofolio filter/refresh functions
-function filter_portfolio_tags(tag_name){
+function FILTER_PORTFOLIO_TAGS(tag_name){
   var is_checked = TAGS_INFO_OBJ.get_name_checked(tag_name);
   $('#portfolio_tags_cloud .portfolio_tags li').each( function(){
     if($(this).text() == tag_name){ (is_checked)? $(this).addClass('checked'):$(this).removeClass('checked'); }
@@ -47,7 +47,7 @@ function filter_portfolio_tags(tag_name){
       if($(this).text() == tag_name){ 
         if(is_checked){
           $(this).addClass('checked')
-          $('#portfolio_tags_cloud').after($('#p_id_'+matched_pid_list[i]));
+          //$('#portfolio_tags_cloud').after($('#p_id_'+matched_pid_list[i]));
         } else { $(this).removeClass('checked'); }
       }
       if($(this).hasClass('checked')){ should_hide = false; }
@@ -55,7 +55,7 @@ function filter_portfolio_tags(tag_name){
     (should_hide)? $('#p_id_'+matched_pid_list[i]).fadeOut("slow"):$('#p_id_'+matched_pid_list[i]).fadeIn("slow");
   }
 }
-function refresh_portfolio_display(){
+function REFRESH_PORTFOLIO_DISPLAY(){
   $('.portfolio').each( function(){
     var should_hide = true;
     $(this).find('.portfolio_tags li').each( function(){
@@ -80,13 +80,13 @@ function SHOW_AREA(hash_vars) {
       $('#vitae').fadeIn('slow');
       break;
     case 'portfolio':
-      collapse_portfolio(true);
+      COLLPASE_PORTFOLIO(true);
       $('#portfolio_tags_cloud, .portfolio').fadeIn('slow');
-      refresh_portfolio_display();
+      REFRESH_PORTFOLIO_DISPLAY();
       if(hash_vars['p_id'] != undefined){
         // Ensure that content img is loaded before expansion
-        //$('#p_id_'+hash_vars['p_id']+' .portfolio_content_img')[0].onload  = function() { expand_portfolio(hash_vars['p_id']); }
-        expand_portfolio(hash_vars['p_id']);
+        //$('#p_id_'+hash_vars['p_id']+' .portfolio_content_img')[0].onload  = function() { EXPAND_PORTFOLIO(hash_vars['p_id']); }
+        EXPAND_PORTFOLIO(hash_vars['p_id']);
       }
       break;
 	  case 'misc':
@@ -101,8 +101,8 @@ function SHOW_AREA(hash_vars) {
 
 function BG_CROPPING(){
   // Position the horizontal frame 
-  $('#hor_frame').css('height', $('body').width()*27/64+'px').css('top', ($('body').height()-$('#hor_frame').height())/2 );
-  $('#copyright_footer').css('top', ($('body').height()-$('#hor_frame').height())/2+ 'px')
+  $('#hor_frame').css('height', $('body').width()*27/64+'px').css('top', ($('body').height()-$('#hor_frame').height())/3 );
+  $('#copyright_footer').css('top', ($('body').height()-$('#hor_frame').height())/3+ 'px')
   //$('#hor_frame').css('width', $('body').width() + 'px'); // 1px frame issue
   // Position the background frame
   $('#bg_frame').css('width', $('body').width()*0.95+'px');
@@ -116,7 +116,7 @@ function BG_CROPPING(){
   
   // Header and Footer
   //$('#main_frame').css('width', $('#main_frame').width() + 'px');
-  $('#main_frame').css('height', $('#bg_frame').height()-40 + 'px');
+  $('#main_frame').css('height', $('#bg_frame').height()-56 + 'px');
   $('#menu_header, #page_footer').css('width', $('#hor_frame').width() +'px');
   $('#menu_header, #page_footer').css('margin-left', ($('#bg_frame').width()-$('#hor_frame').width())/2+'px');
 
@@ -129,13 +129,17 @@ $(document).ready(function(){
   // Generate portfolio HTML 
   for(var i=portfolio_entries.length-1; i>=0; --i){
     var p_id = portfolio_entries[i]['md5_pid'];
-    var p_entry = 
-      '<section class="area portfolio" id="p_id_'+p_id+'"> <img class="portfolio_thumb_img" alt="" src="imgs/portf_'+p_id+'_thumb.jpg">'+
+    var p_entry = '<section class="area portfolio';
+    if(portfolio_entries[i]['status']['highlighted']){ p_entry += ' highlighted'; }
+    p_entry += '" id="p_id_'+p_id+'"> <div class="portfolio_status">' + (portfolio_entries[i]['status']['active']? 'active':portfolio_entries[i]['status']['date']);
+
+    p_entry += 
+      '</div><img class="portfolio_thumb_img" alt="" src="imgs/portf_'+p_id+'_thumb.jpg">'+
         '<a href="#!p=portfolio&p_id='+p_id+'"><div class="portfolio_title"> <h2>.'+portfolio_entries[i]['title']+'</h2></div></a>'+
           '<div class="portfolio_content">'+
-            '<div class="portfolio_fn">.collapse( )</div>'+
+            '<div class="portfolio_fn">.close( )</div>'+
             '<article> <header>.'+portfolio_entries[i]['header']+'</header>'+
-              '<div class="portfolio_content_img" style="background-image: url(imgs/portf_'+p_id+'.jpg);"><div class="portfolio_exp"><h2>';
+              '<div class="portfolio_content_img" style="background-image: url(imgs/portf_'+p_id+'.jpg); background-position: 0 '+portfolio_entries[i]['status']['content_img_offset']+'px;"><div class="portfolio_exp"><h2>';
               //'<div class="portfolio_exp"><h2>';
     
     // Iterate through meta information
@@ -151,26 +155,26 @@ $(document).ready(function(){
     if(portfolio_entries[i].hasOwnProperty('links') ){
       p_entry += '<b>Links: </b>';
       for(var j=0; j<portfolio_entries[i]['links'].length; ++j ){
+        if(j != 0){ p_entry += ', '; }
         p_entry += '[<a href="'+portfolio_entries[i]['links'][j]['href']+'">'+portfolio_entries[i]['links'][j]['label']+'</a>] ';
       }
       p_entry += '<br>';
     }
 
     // Iterate through images
-    /*if(portfolio_entries[i].hasOwnProperty('images') ){
-      p_entry += '<b>Additional Images: </b><br>';
+    if(portfolio_entries[i].hasOwnProperty('images') ){
+      p_entry += '<b>Additional Images: </b>';
       for(var j=0; j<portfolio_entries[i]['images'].length; ++j ){
-        p_entry += '<img class="content_thumb_img" alt="" src="'+portfolio_entries[i]['images'][j]+'">';
+        if(j != 0){ p_entry += ', '; }
+        p_entry += '<a class="content_thumb_img" href="'+portfolio_entries[i]['images'][j]+'">['+(j+1)+']</a>';
       }
-      p_entry += '<br>';
-    }*/
-
+    }
 
     // Introduction and close previous tags and open 'tags' tag
     p_entry += '</h2></div></div><b>Introduction:</b><br>'+portfolio_entries[i]['introduction']+'</article> </div> <ol class="portfolio_tags">';
                         
     // Iterate through tags      
-    for(var j=portfolio_entries[i]['tags'].length-1; j>=0; --j ){
+    for(var j=0; j<portfolio_entries[i]['tags'].length; ++j ){
       p_entry += '<li>'+portfolio_entries[i]['tags'][j]+'</li> ';
       TAGS_INFO_OBJ.insert_pid( portfolio_entries[i]['tags'][j], p_id);
     }
@@ -178,7 +182,7 @@ $(document).ready(function(){
   }
 
   // Global behavior initialzation 
-  $('#page_footer a, #vitae a, .social_list a, .portfolio .portfolio_exp a, #about_text a').attr('rel', 'external'); // set rel=external 
+  $('#page_footer a, #vitae a, .social_list a, .portfolio .portfolio_exp a, #about_text a, #misc a').attr('rel', 'external'); // set rel=external 
   $("a[rel='external']").attr('target', '_blank');
 
 
@@ -195,7 +199,7 @@ $(document).ready(function(){
     }
   }
 
-  //$('.portfolio_tags li').addClass('checked'); // If use select all as default
+  $('.portfolio_tags li').addClass('checked'); // If use select all as default
   $('.portfolio_tags li').each( function(){
     $(this).css('background-color', TAGS_INFO_OBJ.get_color( TAGS_INFO_OBJ.get_type( $(this).text())));
   });
@@ -234,21 +238,21 @@ $(document).ready(function(){
 
   // Portfolio triggers
   $("#main_frame").on("click", ".portfolio .portfolio_title", function(){
-    expand_portfolio( $(this).parents('.portfolio').attr('id').slice(5) );
+    EXPAND_PORTFOLIO( $(this).parents('.portfolio').attr('id').slice(5) );
   });
   $("#main_frame").on("click", ".portfolio .portfolio_fn", function(){
-    collapse_portfolio(false, $(this).parents('.portfolio').attr('id').slice(5) ); 
-    refresh_portfolio_display();
+    COLLPASE_PORTFOLIO(false, $(this).parents('.portfolio').attr('id').slice(5) ); 
+    REFRESH_PORTFOLIO_DISPLAY();
   });
   $('.portfolio_tags li').click(function() {
-    collapse_portfolio(true);
-    refresh_portfolio_display();
+    COLLPASE_PORTFOLIO(true);
+    REFRESH_PORTFOLIO_DISPLAY();
     TAGS_INFO_OBJ.set_name_checked('toggle', $(this).text());
-    filter_portfolio_tags($(this).text());
-    //refresh_portfolio_display();
+    FILTER_PORTFOLIO_TAGS($(this).text());
+    //REFRESH_PORTFOLIO_DISPLAY();
   });
   $('#portfolio_tags_cloud .portfolio_fn').click(function(){
-    collapse_portfolio(true);
+    COLLPASE_PORTFOLIO(true);
     switch($(this).text()){
       case '.select("all")':
         TAGS_INFO_OBJ.set_name_checked("all");
@@ -266,7 +270,7 @@ $(document).ready(function(){
   // Pop image triggers
   $(".portfolio .content_thumb_img").hover( function() {
     $('#pop_img').css('top', $(this).offset().top).css('left', $(this).offset().left+$(this).width()+2)
-    $("#pop_img img").attr("src", $(this).attr("src"));
+    $("#pop_img img").attr("src", $(this).attr("href"));
     $("#pop_img").stop(true, true).fadeIn("normal");
   }, function() { $("#pop_img").fadeOut("normal"); }); 
 

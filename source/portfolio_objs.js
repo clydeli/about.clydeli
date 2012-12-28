@@ -90,7 +90,7 @@ var portfolio_entries = [
 	meta_expansion:
 	  [ { label: "Research Members", content: "Chiang-Nan Lin, and An-Tai Li" },
 	    { label: "Advisor", content: "Professor Chen-Mou Cheng, Ph.D." } ],
-	introduction: 'Combined backtracking search and constraint programming to find optimal instruction schedule that used minimal number of registers. By providing effective constraints, we could find optimal solutions for basic blocks with up to about one-hundred and fifty instructions.<br><br>',
+	introduction: 'Surveyed and developed a method to find optimal instruction schedule that used minimal number of registers. By combining backtracking search and constraint programming, we could find optimal solutions for basic blocks with up to about one-hundred and fifty instruction lines, approximately double instruction lines compared to prior research.',
    	tags: ["C++", "algorithm", "research", "NTU"]
 },
 {

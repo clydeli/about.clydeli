@@ -121,7 +121,7 @@ article header {
   font-size: 16px; font-weight: 700; color: #bbb; background-color: #333;
   padding: 2px 4px; border: 1px solid #666;
 }
-.portfolio_fn { background-color: #aaa; border-radius: 1px; opacity: 0.8; cursor: pointer;}
+.portfolio_fn { display: block; background-color: #aaa; border-radius: 1px; opacity: 0.8; cursor: pointer;}
 .portfolio .portfolio_thumb_img { margin: 8px 0 0 8px; width: 144px; height: 144px; }
 .portfolio .portfolio_title {
   position: absolute; left: 8px; top: 8px; width: 144px; height: 144px;

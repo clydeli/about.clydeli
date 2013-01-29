@@ -4,21 +4,15 @@ about.clydeli
 Intro
 ---------------------
 
-This is the source of An-Tai (Clyde) Li's personal webpage, the page is hosted at http://about.clydeli.com.
-
-
-Folders
----------------------
-
-+ /app : readable code source of the webpage.
+This is the source of An-Tai (Clyde) Li's personal webpage, which is maintained using Yeoman (http://yeoman.io/) workflow tool.  The distribution version is hosted at http://about.clydeli.com.   
 
 
 Todo
 ---------------------
 
-1. Refactor CSS and use SASS
+1. Refactor CSS
 2. Review Javascript code architecture
-3. Use strict Javascript
+3. Use JSLint to verify JavaScript
 
 
 Known Issues

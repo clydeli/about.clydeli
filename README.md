@@ -10,8 +10,7 @@ This is the source of An-Tai (Clyde) Li's personal webpage, the page is hosted a
 Folders
 ---------------------
 
-+ /source : readable code source of the webpage.
-+ /release : the "compiled" or "minimized" version of the code later hosted.
++ /app : readable code source of the webpage.
 
 
 Todo

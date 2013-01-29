@@ -1,20 +1,20 @@
-﻿// Background image information
+// Background image information
 var BG_IMG_LIST = [
-  new bg_img('https://lh3.googleusercontent.com/-5y1dQeU3yYw/TjJ7aDf8aXI/AAAAAAAAKBE/wxGVszezlAc/s1440/P1010606.JPG', '<a href="https://plus.google.com/photos/106431348054423810177/albums/5634698332240377633/5634701771340015986" >Shanghai, China  Aug. 2010 </a>', 3/4, 0.55),
-  new bg_img('https://lh5.googleusercontent.com/-zFqyF61Qv6s/TSk_1i5e9_I/AAAAAAAAIao/QFGK2_iM4Yw/s1440/20100731836.jpg', '<a href="https://plus.google.com/photos/106431348054423810177/albums/5560041465274782513/5560045404099114994" >Tokyo, Japan  Jul. 2010 </a>', 3/4, 0.6),
-  new bg_img('https://lh3.googleusercontent.com/-Tx8HuKsKgRE/SOJE5vsy8II/AAAAAAAACeE/bhkT8AGNAsc/s1440/20080824868.jpg', '<a href="https://plus.google.com/photos/106431348054423810177/albums/5251833612796485585/5251835874315006082" >Alishan, Taiwan  Aug. 2008 </a>', 3/4, 0.65),
-  new bg_img('https://lh4.googleusercontent.com/-g2m2CwCxBb0/TCyjVNdnKEI/AAAAAAAAGbs/mM3s5dm_V3o/s1440/20100630527.jpg', '<a href="https://plus.google.com/photos/106431348054423810177/albums/5488941284228439281/5488941630644234306?authkey=CKiw89DP_vWYNg" >Google Taiwan  Jun. 2010 </a>', 0.75, 0.6),
-  new bg_img('https://lh4.googleusercontent.com/-qAPXCuFQ4X4/TU1oHPLax4I/AAAAAAAAJMQ/eNsnuaawGOU/s1440/20100622507.jpg', '<a href="https://plus.google.com/photos/106431348054423810177/albums/5570209861323780065/5570222787669968770" >HSNU, Taiwan  Jun. 2010 </a>', 3/4, 0.3),
-  new bg_img('https://lh3.googleusercontent.com/-WKls_I1sTvI/SODl7NqSa7I/AAAAAAAACVU/lWIFgScJ0qU/s1440/20080813769.jpg', '<a href="https://plus.google.com/photos/106431348054423810177/albums/5251446656504758577/5251449970956069810" >Bitoujiao, Taiwan  Aug. 2008 </a>', 3/4, 0.5),
-  new bg_img('https://lh4.googleusercontent.com/-MWw7U58wmy4/UCnrIgVj6JI/AAAAAAAAPu8/klDwpEALN0A/s1440/P1130116.JPG', '<a href="https://plus.google.com/photos/106431348054423810177/albums/5776405569811745793/5776406528431220882" >Taipei, Taiwan  Sep. 2012 </a>', 9/16, 0.5)
+	new bg_img('https://lh3.googleusercontent.com/-5y1dQeU3yYw/TjJ7aDf8aXI/AAAAAAAAKBE/wxGVszezlAc/s1440/P1010606.JPG', '<a href="https://plus.google.com/photos/106431348054423810177/albums/5634698332240377633/5634701771340015986" >Shanghai, China  Aug. 2010 </a>', 3/4, 0.55),
+	new bg_img('https://lh5.googleusercontent.com/-zFqyF61Qv6s/TSk_1i5e9_I/AAAAAAAAIao/QFGK2_iM4Yw/s1440/20100731836.jpg', '<a href="https://plus.google.com/photos/106431348054423810177/albums/5560041465274782513/5560045404099114994" >Tokyo, Japan  Jul. 2010 </a>', 3/4, 0.6),
+	new bg_img('https://lh3.googleusercontent.com/-Tx8HuKsKgRE/SOJE5vsy8II/AAAAAAAACeE/bhkT8AGNAsc/s1440/20080824868.jpg', '<a href="https://plus.google.com/photos/106431348054423810177/albums/5251833612796485585/5251835874315006082" >Alishan, Taiwan  Aug. 2008 </a>', 3/4, 0.65),
+	new bg_img('https://lh4.googleusercontent.com/-g2m2CwCxBb0/TCyjVNdnKEI/AAAAAAAAGbs/mM3s5dm_V3o/s1440/20100630527.jpg', '<a href="https://plus.google.com/photos/106431348054423810177/albums/5488941284228439281/5488941630644234306?authkey=CKiw89DP_vWYNg" >Google Taiwan  Jun. 2010 </a>', 0.75, 0.6),
+	new bg_img('https://lh4.googleusercontent.com/-qAPXCuFQ4X4/TU1oHPLax4I/AAAAAAAAJMQ/eNsnuaawGOU/s1440/20100622507.jpg', '<a href="https://plus.google.com/photos/106431348054423810177/albums/5570209861323780065/5570222787669968770" >HSNU, Taiwan  Jun. 2010 </a>', 3/4, 0.3),
+	new bg_img('https://lh3.googleusercontent.com/-WKls_I1sTvI/SODl7NqSa7I/AAAAAAAACVU/lWIFgScJ0qU/s1440/20080813769.jpg', '<a href="https://plus.google.com/photos/106431348054423810177/albums/5251446656504758577/5251449970956069810" >Bitoujiao, Taiwan  Aug. 2008 </a>', 3/4, 0.5),
+	new bg_img('https://lh4.googleusercontent.com/-MWw7U58wmy4/UCnrIgVj6JI/AAAAAAAAPu8/klDwpEALN0A/s1440/P1130116.JPG', '<a href="https://plus.google.com/photos/106431348054423810177/albums/5776405569811745793/5776406528431220882" >Taipei, Taiwan  Sep. 2012 </a>', 9/16, 0.5)
 ];
 
 // Portfolio tags information
 var TAGS_INFO_OBJ = new tags_info();
-TAGS_INFO_OBJ.insert_type('lang', 'LightBlue', ['C','C++','C#','Java','HTML','CSS','JS','RoR','verilog'])
-TAGS_INFO_OBJ.insert_type('field', 'LightCoral', ['web','architecture','UI','algorithm','game'])
-TAGS_INFO_OBJ.insert_type('type', 'Khaki', ['research','project','book'])
-TAGS_INFO_OBJ.insert_type('genre', 'LightGreen', ['indie','NTU', 'Intel-NTU', 'CMU'])
+TAGS_INFO_OBJ.insert_type('lang', 'LightBlue', ['C','C++','C#','Java','HTML','CSS','JS','RoR','verilog']);
+TAGS_INFO_OBJ.insert_type('field', 'LightCoral', ['web','architecture','UI','algorithm','game']);
+TAGS_INFO_OBJ.insert_type('type', 'Khaki', ['research','project','book']);
+TAGS_INFO_OBJ.insert_type('genre', 'LightGreen', ['indie','NTU', 'Intel-NTU', 'CMU']);
 
 // Randomize a background image
 var now = new Date();
@@ -22,16 +22,16 @@ var BG_NUM = Math.floor(Math.random(now.getSeconds())*BG_IMG_LIST.length);
 
 // Portofolio collapse/expand functions
 function COLLPASE_PORTFOLIO(is_all, p_id){
-  var selector = (is_all)? '.portfolio':'#p_id_'+p_id;
-  $(selector).removeClass('p_expanded');
+	var selector = (is_all)? '.portfolio':'#p_id_'+p_id;
+	$(selector).removeClass('p_expanded');
 }
 function EXPAND_PORTFOLIO(p_id){
-  COLLPASE_PORTFOLIO(true);
-  $('#p_id_'+p_id).addClass('p_expanded');
-  //$('#portfolio_tags_cloud').after($('#p_id_'+p_id)); // if move to first
-  // fadeIn effect
-  $('.portfolio').hide();
-  $('#p_id_'+p_id).fadeIn("slow");
+	COLLPASE_PORTFOLIO(true);
+	$('#p_id_'+p_id).addClass('p_expanded');
+	//$('#portfolio_tags_cloud').after($('#p_id_'+p_id)); // if move to first
+	// fadeIn effect
+	$('.portfolio').hide();
+	$('#p_id_'+p_id).fadeIn("slow");
 }
 
 // Portofolio filter/refresh functions
@@ -47,7 +47,7 @@ function FILTER_PORTFOLIO_TAGS(tag_name){
     $('#p_id_'+matched_pid_list[i]+' .portfolio_tags li').each( function(){
       if($(this).text() == tag_name){ 
         if(is_checked){
-          $(this).addClass('checked')
+          $(this).addClass('checked');
           //$('#portfolio_tags_cloud').after($('#p_id_'+matched_pid_list[i]));
         } else { $(this).removeClass('checked'); }
       }
@@ -64,6 +64,8 @@ function REFRESH_PORTFOLIO_DISPLAY(){
     });
     (should_hide)? $(this).hide():$(this).show();
   });
+  console.log($('#main_frame').height()-$('#portfolio_tags_cloud').height());
+  $('#portfolio_tags_cloud').css("margin-bottom", $('#main_frame').height()-$('#portfolio_tags_cloud').height()+20);
 }
 
 
@@ -71,12 +73,12 @@ function REFRESH_PORTFOLIO_DISPLAY(){
 function SHOW_AREA(hash_vars) {
   // navbar manipulation
   $('#menu_header ul li').removeClass("active");
-  $('#'+hash_vars['p']+'_btn').addClass("active");
+  $('#'+hash_vars.p+'_btn').addClass("active");
 
   // clearout areas
   $('.area').hide();
 
-  switch(hash_vars['p']){
+  switch(hash_vars.p){
     case 'vitae':
       $('#vitae').fadeIn('slow');
       break;
@@ -84,17 +86,17 @@ function SHOW_AREA(hash_vars) {
       COLLPASE_PORTFOLIO(true);
       $('#portfolio_tags_cloud, .portfolio').fadeIn('slow');
       REFRESH_PORTFOLIO_DISPLAY();
-      if(hash_vars['p_id'] != undefined){
+      if(hash_vars.p_id !== undefined){
         // Ensure that content img is loaded before expansion
         //$('#p_id_'+hash_vars['p_id']+' .portfolio_content_img')[0].onload  = function() { EXPAND_PORTFOLIO(hash_vars['p_id']); }
-        EXPAND_PORTFOLIO(hash_vars['p_id']);
+        EXPAND_PORTFOLIO(hash_vars.p_id);
       }
       break;
-	  case 'misc':
+    case 'misc':
       $('#misc').fadeIn('slow');
       break;
     default:
-      $('#home_btn').addClass("active")
+      $('#home_btn').addClass("active");
       $('#about_profile, #about_text').fadeIn('slow');
       break;
   }
@@ -103,7 +105,7 @@ function SHOW_AREA(hash_vars) {
 function BG_CROPPING(){
   // Position the horizontal frame 
   $('#hor_frame').css('height', $('body').width()*27/64+'px').css('top', ($('body').height()-$('#hor_frame').height())/3 );
-  $('#copyright_footer').css('top', ($('body').height()-$('#hor_frame').height())/3+ 'px')
+  $('#copyright_footer').css('top', ($('body').height()-$('#hor_frame').height())/3+ 'px');
   //$('#hor_frame').css('width', $('body').width() + 'px'); // 1px frame issue
   // Position the background frame
   $('#bg_frame').css('width', $('body').width()*0.95+'px');
@@ -123,13 +125,13 @@ function BG_CROPPING(){
 
   // Make right float compatible with 104% scroll hide HACK
   $('#misc').css('margin-right', $('#main_frame').width()-$('#bg_frame').width()+16);
-};
+}
 
 $(document).ready(function(){
 
   // Generate portfolio HTML 
   for(var i=portfolio_entries.length-1; i>=0; --i){
-    var p_id = portfolio_entries[i]['md5_pid'];
+    var p_id = portfolio_entries[i].md5_pid;
     var p_entry = '<section class="area portfolio';
     if(portfolio_entries[i]['status']['highlighted']){ p_entry += ' highlighted'; }
     p_entry += '" id="p_id_'+p_id+'"> <div class="portfolio_status">' + (portfolio_entries[i]['status']['active']? 'active':portfolio_entries[i]['status']['date']);
@@ -155,8 +157,8 @@ $(document).ready(function(){
     // Iterate through links
     if(portfolio_entries[i].hasOwnProperty('links') ){
       p_entry += '<b>Links: </b>';
-      for(var j=0; j<portfolio_entries[i]['links'].length; ++j ){
-        if(j != 0){ p_entry += ', '; }
+      for(var j=0; j<portfolio_entries[i].links.length; ++j ){
+        if(j !== 0){ p_entry += ', '; }
         p_entry += '[<a href="'+portfolio_entries[i]['links'][j]['href']+'">'+portfolio_entries[i]['links'][j]['label']+'</a>] ';
       }
       p_entry += '<br>';
@@ -165,7 +167,7 @@ $(document).ready(function(){
     // Iterate through images
     if(portfolio_entries[i].hasOwnProperty('images') ){
       p_entry += '<b>Additional Images: </b>';
-      for(var j=0; j<portfolio_entries[i]['images'].length; ++j ){
+      for(var j=0; j<portfolio_entries[i].images.length; ++j ){
         if(j != 0){ p_entry += ', '; }
         p_entry += '<a class="content_thumb_img" href="'+portfolio_entries[i]['images'][j]+'">['+(j+1)+']</a>';
       }

@@ -1,22 +1,28 @@
-function bg_img(img_src, img_info, img_ratio, img_center) {
+var clydeli = clydeli || {}; 
+clydeli.Type = {};
+
+// Background Image Type
+clydeli.Type.bg_img = function(img_src, img_info, img_ratio, img_center) {
 	this.src = img_src;
 	this.info = img_info;
 	this.ratio = img_ratio;
 	this.center = img_center;
-}
-bg_img.prototype = {
+};
+clydeli.Type.bg_img.prototype = {
 	get_src : function(){ return this.src; },
 	get_info: function(){ return this.info; },
 	get_ratio : function(){ return this.ratio; },
 	get_center : function(){ return this.center; }
 };
 
-
-function tags_info() {
-	this.name_type_hash = {}, this.type_color_hash = {};
-	this.name_checked_hash = {}, this.name_pid_hash = {};
-}
-tags_info.prototype = {
+// TagsInfo global Type
+clydeli.Type.tags_info = function() {
+	this.name_type_hash = {};
+	this.type_color_hash = {};
+	this.name_checked_hash = {};
+	this.name_pid_hash = {};
+};
+clydeli.Type.tags_info.prototype = {
 	insert_type : function(tag_type, tag_color, tags_list){
 		for( var i=0; i < tags_list.length; i++) { 
 			this.name_type_hash[tags_list[i]] = tag_type;

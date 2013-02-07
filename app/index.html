@@ -1,80 +1,76 @@
 <!DOCTYPE html>
 <html><head>
-  <link rel="shortcut icon" href="favicon.ico">
-  <title>An-Tai (Clyde) Li</title>
-  <meta charset="utf-8">
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
-  <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.9.2/jquery-ui.min.js"></script>
-  <link href='http://fonts.googleapis.com/css?family=Philosopher' rel='stylesheet'>
-  <!-- build:css styles/main.css -->
-  <link href="styles/about.css" rel="stylesheet">
-  <!-- endbuild -->
-  <!-- IE Compatible Stuff... -->
-    <!--[if lt IE 9]>
-    <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
-    <![endif]-->
-  <!-- build:js scripts/main.js -->
-  <script src="scripts/classes.js"></script>
-  <script src="scripts/portfolio_objs.js"></script>
-  <script src="scripts/about.js"></script>
-  <!-- endbuild -->
+	<link rel="shortcut icon" href="favicon.ico">
+	<title>An-Tai (Clyde) Li</title>
+	<meta charset="utf-8">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
+	<script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.9.2/jquery-ui.min.js"></script>
+	<link href='http://fonts.googleapis.com/css?family=Philosopher' rel='stylesheet'>
+	<!-- build:css styles/main.css -->
+	<link href="styles/about.css" rel="stylesheet">
+	<!-- endbuild -->
+
+	<!-- IE Compatible Stuff... -->
+		<!--[if lt IE 9]>
+		<script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+		<![endif]-->
+
+	<!-- build:js scripts/main.js -->
+	<script src="scripts/classes.js"></script>
+	<script src="scripts/data.js"></script>
+	<script src="scripts/methods.js"></script>
+	<script src="scripts/about.js"></script>
+	<!-- endbuild -->
 </head>
 
 <body>
-<!-- google analytics -->
-  <script>
-	var _gaq = _gaq || [];
-	_gaq.push(['_setAccount', 'UA-4130309-3']);
-	_gaq.push(['_trackPageview']);
-	(function() {
-	  var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
-	  ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
-	  var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
-	})();
-  </script>
 
-  <div id="pop_img" title=""><a href="#"><img alt="" src="favicon.ico"></a></div>
+	<div id="pop_img" title=""><a href="#"><img alt="" src="favicon.ico"></a></div>
 
-  <div id='hor_frame'><div id='dim_block'></div><div id='bg_frame'>
+	<div id='hor_frame'><div id='dim_block'></div><div id='bg_frame'>
 	<header id='menu_header'>
-	  <h1>An-Tai (Clyde) Li</h1>
-	  <ul class='social_list'>
-		<li><a href="https://plus.google.com/106431348054423810177">.g+</a></li>
-		<li><a href="https://facebook.com/clydeli">.fb</a></li>
-		<li><a href="http://blog.clydeli.com">.blog</a></li>
-		<li><a href="http://www.last.fm/user/clydeli/library">.last_fm</a></li>
+		<h1>An-Tai (Clyde) Li</h1>
+		<ul class='social_list'>
+			<li><a href="https://plus.google.com/106431348054423810177">.g+</a></li>
+			<li><a href="https://facebook.com/clydeli">.fb</a></li>
+			<li><a href="http://blog.clydeli.com">.blog</a></li>
+			<li><a href="http://www.last.fm/user/clydeli/library">.last_fm</a></li>
 	  </ul>
-	  <nav><ul>
-		<li id="home_btn" class="active"><a target="_self" href="#!">::home</a></li>
-		<li id="vitae_btn"><a target="_self" href="#!p=vitae">::vitae</a></li>
-		<li id="portfolio_btn"><a target="_self" href="#!p=portfolio">::portfolio</a></li>
-		<li id="misc_btn"><a target="_self" href="#!p=misc">::misc</a></li>
-	  </ul></nav>
+		<nav><ul>
+			<li id="home_btn" class="active"><a target="_self" href="#!">::home</a></li>
+			<li id="vitae_btn"><a target="_self" href="#!p=vitae">::vitae</a></li>
+			<li id="portfolio_btn"><a target="_self" href="#!p=portfolio">::portfolio</a></li>
+			<li id="misc_btn"><a target="_self" href="#!p=misc">::misc</a></li>
+		</ul></nav>
 	</header>
 
 	<div id='main_frame'>
 <!-- about pieces -->
-	  <section id="about_profile" class="area"><ol><li>
-		<article><header>.profile_picture</header><div><img alt="" src="https://graph.facebook.com/clydeli/picture?type=large"/><div class='dummy_img'></div></div></article>
-		<article><header>.email</header><div>clydeli [at] cmu.edu<br>clyde1008li [at] gmail.com</div></article>
-		<article><header>.webpage</header><div>http://about.clydeli.com</div></article>
-	  </li></ol></section>
+		<section id="about_profile" class="area"><ol>
+			<li><article><header>.profile_picture</header><div><img alt="" src="https://graph.facebook.com/clydeli/picture?type=large"/><div class='dummy_img'></div></div></article></li>
+			<li><article><header>.email</header><div>clydeli [at] cmu.edu<br>clyde1008li [at] gmail.com</div></article></li>
+			<li><article><header>.webpage</header><div>http://about.clydeli.com</div></article></li>
+		</ol></section>
 
-	  <section id="about_text" class="area"><ol><li>
-		<article><header>.about_me</header><br><div>
-Hi, this is <b>An-Tai Li, 李安泰</b>, also go by the name <b>Clyde Li</b>.<br><br>
-I am from <b>Taipei, Taiwan</b>, a global powerhouse in computer industry where I received my B.S. degree in June 2010 from the department of Electrical Engineering in <a href="http://www.ntu.edu.tw"><b>National Taiwan University</b></a>.<br><br>  I am now studying M.S. in Software Engineering at <a href="http://www.cmu.edu"><b>Carnegie Mellon University</b></a>.  My broad interests are in <b>Web Development</b>, <b>Frontend Design</b> and <b>High Speed Computing</b>. <br><br>
+		<section id="about_text" class="area"><ol><li>
+			<article><header>.about_me</header><br><div>
+Hi, this is <b>An-Tai Li, 李安泰</b>, also goes by the name <b>Clyde Li</b>.<br><br>
+I am from<b> Taipei, Taiwan</b>, a global powerhouse in computer industry where I received my B.S. degree in June 2010 from the department of Electrical Engineering in <a href="http://www.ntu.edu.tw"><b>National Taiwan University</b></a>.<br><br>  I am now studying M.S. in Software Engineering at <a href="http://www.cmu.edu"><b>Carnegie Mellon University</b></a>.  My broad interests are in <b>Web Development</b>, <b>Front-end Design</b>, and <b>High Speed Computing</b>. <br><br>
 Enhancing user experiences in web applications has been a long career goal.  I'm looking forward to contribute and build great products with innovative designs and high-quality implementations.<br><br>
 <b>Besides academia</b>,<br><br>
 Basketball is my favourite sport while I also like cycling and hiking in the city.  I love listening to a wide variety of music, including Post Rock, British Rock, and Indie, etc.  I also enjoy snapshot photography, cooking, and reading.
-		</div></article>
-	  </li></ol></section>  
+			</div></article>
+		</li></ol></section>
 
 <!-- vitae piece -->
-	  <section id="vitae" class="area"><ol>
-		<li><div class="vitae_fn"><a href="https://docs.google.com/document/d/1MgreDZAsh5tuAjkhtY7D6g5_159rZcD8Sfp7p69GWTk/edit">.google_drive_version</a></div></li>
-		<li><div class="vitae_fn"><a href="http://www.linkedin.com/in/clydeli">.linkedin</a></div></li>		
-		<li><br><br>
+		<section id="vitae" class="area">
+			<ol>
+				<li><div class="vitae_fn fn_buttons"><a href="https://docs.google.com/document/d/1MgreDZAsh5tuAjkhtY7D6g5_159rZcD8Sfp7p69GWTk/edit">.google_drive_version</a></div></li>
+				<li><div class="vitae_fn fn_buttons"><a href="http://www.linkedin.com/in/clydeli">.linkedin</a></div></li>
+			</ol>
+			<br>
+			<ol>
+				<li>
 	<!-- edcucation piece -->
 		  <article><header>.education</header>
 			<div>
@@ -94,18 +90,18 @@ Bachelor of Science, Electrical Engineering.
 <i>Diploma in Gifted Class of Math and Science</i>
 			</div>
 -->
-		  </article>
+		  </article></li>
 
-		  <article><header>.additional_course</header>
+		  <li><article><header>.additional_course</header>
 			<div>
 <b>Human Computer Interaction (HCI)</b>, <i><a href="https://www.coursera.org/">Coursera</a></i>
 <div class="date">11/2012</div><br>
 <ul><li class="vitae_exp"><a href="docs/coursera_hci_cert.pdf">Completed the online Human-Computer Interaction course</a> hosted by Stanford University.</li></ul>
 			</div>
-		  </article>
+		  </article></li>
 
 	<!-- work experiences piece -->
-		  <article><header>.work_experience</header>
+		  <li><article><header>.work_experience</header>
 		  	<div>
 <b><a href="http://www.cmu.edu">Carnegie Mellon University</a></b><div class="date">08/2012 ~ Current</div><br>
 Research Assistant<br>
@@ -114,8 +110,8 @@ Research Assistant<br>
 			<div>
 <b><a href="http://ccc.ntu.edu.tw">Intel-NTU Connected Context Computing Center</a></b><div class="date">01/2012 ~ 06/2012</div><br>
 Research Assistant<br>
-<ul><li class="vitae_exp">Surveyed and implemented a proxy server to enable Secure Index support in database.</li>
-<li class="vitae_exp">Designed <a href="#!p=portfolio&amp;p_id=dc95388b403a2ebd4a215dd165198938">method and system for managing SQL-NoSQL Hybrid Database</a>. <b>(Taiwan R.O.C. Patent Pending)</b></li></ul>
+<ul><li class="vitae_exp">Designed <a href="#!p=portfolio&amp;p_id=dc95388b403a2ebd4a215dd165198938">method and system for managing SQL-NoSQL Hybrid Database</a>. <b>(Taiwan R.O.C. Patent Pending)</b></li><li class="vitae_exp">Surveyed and implemented a proxy server to enable Secure Index support in database.</li>
+</ul>
 			</div>
 <!--
 			<div>
@@ -129,22 +125,19 @@ Research Assistant<br>
 <div class="vitae_exp">Performed both front-end and back-end coding with regular maintenance and S.E.O.</div>
 			</div>
 -->
-		  </article>
+		  </article></li>
 	<!-- publications piece -->
-		  <article><header>.publications</header>
+		  <li><article><header>.publications</header>
 			<div>
 <b>Books</b>
 <ul><li class="vitae_exp">Chi-Lung Lee, and <b>An-Tai Li</b>.  "<b><a href="#!p=portfolio&amp;p_id=c416e2311cc1b57378f9cb33fccd6fd7">Programming with Visual C# 2010 in 16 Lessons (Visual C# 2010 程式設計16堂課)</a></b>". Taipei, Taiwan: <a href="http://books.gotop.com.tw/">GOTOP Information Inc.(碁峰資訊)</a>, 2011. Print.
-<!--<br>
-Links: [<a href="http://www.books.com.tw/exep/prod/booksfile.php?item=0010504523">books.com.tw</a>] [<a href="http://books.gotop.com.tw/v_AEL012100">gotop website</a>] [<a href="http://books.gotop.com.tw/v_AEL012100">portofolio page</a>], ISBN:9789862761816</li>--></li>
-			
+</li>
 <li class="vitae_exp">Chi-Lung Lee, and <b>An-Tai Li</b>.  "<b><a href="#!p=portfolio&amp;p_id=f735b0bddc3060a74134bd83a21ed3d4">Making Things Easy with Google (用Google輕鬆過生活)</a></b>". Taipei, Taiwan: <a href="http://www.grandtech.info/">GrandTech Information Co.(上奇資訊)</a>, 2008. Print.
-<!--<br>
-<ul><li class="vitae_exp">Links: [<a href="http://www.books.com.tw/exep/prod/booksfile.php?item=0010421376">books.com.tw</a>] [<a href="#">portofolio page</a>], ISBN:9789866587306--></li></ul>
-			</div>	
-		  </article>
+</li></ul>
+			</div>
+		  </article></li>
 	<!-- research experiences piece -->
-		  <article><header>.research_experience</header>
+		  <li><article><header>.research_experience</header>
 			<div>
 <b><a href="#!p=portfolio&amp;p_id=797ab3a6d11c6b032067fc6405ba2d5b">Minimal Register Usage Instruction Scheduling</a></b>, <i>NTU Fast Crypto Lab</i><div class="date">08/2010</div>
 <ul><li class="vitae_exp">Surveyed and developed a method to find optimal instruction schedule that used minimal number of registers. Able to handle approximately double instruction lines compared to prior research.</li></ul>
@@ -153,7 +146,7 @@ Links: [<a href="http://www.books.com.tw/exep/prod/booksfile.php?item=0010504523
 <b><a href="#!p=portfolio&amp;p_id=a716626e8e002267ba0c7b412bef8125">CPU with Crypto Instructions</a></b>, <i>NTU Fast Crypto Lab</i><div class="date">12/2009</div>
 <ul><li class="vitae_exp">Designed and implemented a CPU with Crypto instructions in hardware description level.</li></ul>
 			</div>
-		  </article>
+		  </article></li>
 	<!-- project experiences piece -->
 <!--
           <article><header>.project_experience</header>
@@ -170,198 +163,51 @@ Links: [<a href="http://www.books.com.tw/exep/prod/booksfile.php?item=0010504523
 		  </article>
 -->
 	<!-- honors piece -->
-		  <article><header>.honors</header>
+		  <li><article><header>.honors</header>
 			<div>
 <b>Invited to Google Taiwan’s Mentorship</b>, <i>Google Taiwan</i><div class="date">06/2010</div><br>
 <ul><li class="vitae_exp">Selected as 1 of 15 invited guests from Google Taiwan 2010 summer internship applicants.</li></ul>
 			</div>
-		  </article>
+		  </article></li>
 	<!-- skills piece -->
-		  <article><header>.skills</header>
+		  <li><article><header>.skills</header>
 			<div>
 <!--<b><i>Languages:</i></b> Mandarin Chinese (Native Fluency), English (High Fluency)<br>
 <b><i>Computer Skills:</i></b> C/C++, C#, Java, JavaScript and jQuery, Ruby and RoR, HTML, CSS, SQL, PHP, Verilog, UML-->
 <b>System Oriented:</b> C++, C#, C(Prior Experience), Java, Python(Prior Experience)<br>
 <b>Web Oriented:</b> JavaScript and jQuery(Proficient), HTML, CSS and SASS, Ruby on Rails, PHP(Prior Experience)
 			</div>
-		  </article><br>
-		  <i>Reference available upon request</i>
-		</li>
+		  </article></li>
+		  <li><i>Reference available upon request</i></li>
+
 	  </ol></section>
-	  
+
 <!-- portfolio pieces -->
-      <section id="portfolio_tags_cloud" class="area"><ol>
-        <li><article> <header>.tags_cloud</header>
-        <div class="portfolio_tags"> </div></article></li>
-        <li><article><header>.tag_functions</header>
-          <ul id="portfolio_tag_fns">
-            <li class="portfolio_fn">.select("all")</li>
-            <li class="portfolio_fn">.select("none")</li>
-          </ul>
+		<section id="portfolio_tags_cloud" class="area"><ol>
+			<li><article> <header>.tags_cloud</header>
+        <div class="portfolio_tags"> </div>
+			</article></li>
+			<li><article><header>.tag_functions</header>
+				<ol id="portfolio_tag_fns">
+					<li><div class="portfolio_fn fn_buttons">.select("all")</div></li>
+					<li><div class="portfolio_fn fn_buttons">.select("none")</div></li>
+				</ol>
     	</article></li>
-    	</ol>
-      </section>
-
-      
-
-<!--
-	  <section class="area portfolio">
-        <img class="portfolio_thumb_img" alt="" src="#">
-        <a href="#"><div class="portfolio_title"><h2>.tagSearch</h2><h3>lq7pVe</h3></div></a>
-		<div class="portfolio_content">
-          <img class="portfolio_content_img" alt="" src="#"> 
-          <article> <header>.tagSearch - Search by Tags</header><div class="portfolio_exp">
-          <h2><b>Links: </b>[<a href="http://apps.clydeli.com/tagSearch">website</a>]</h2>
-          <b>Introduction:</b><br>
-          Most search engines provide us with advanced search abilities by using specified operators to make accurate queries. However, not every typical user makes use of it.<br><br>
-            Integrating the idea to the GUI level by transforming keywords to tags with colors make the concept more clear and adaptable. The new interface also provides a more intuitive experience of manipulating and modifying keywords, which is always good especially for users on devices with touch screens.
-          </div></article>
-        </div>
-        <ol class="portfolio_tags">
-          <li><a href="#">HTML</a></li> <li><a href="#">CSS</a></li> <li><a href="#">JS</a></li> <li><a href="#">UI</a></li> <li><a href="#=">web_dev</a></li> <li><a href="#">indie</a></li>
-        </ol>
-	  </section>
-
-      <section class="area portfolio">
-        <img class="portfolio_thumb_img" alt="" src="#">
-        <a href="#"><div class="portfolio_title"><h2>.Minimal Register Usage Instruction Scheduling</h2><h3>e1qJjG</h3></div></a>
-        <div class="portfolio_content">
-          <img class="portfolio_content_img" alt="" src="#">
-          <article> <header>.Minimal Register Usage Ins. Scheduling</header><div class="portfolio_exp">
-            <h2> <b>Research Members:</b> Chiang-Nan Lin, An-Tai Li<br> <b>Advisor:</b> Professor Chen-Mou Cheng, Ph.D.<br> </h2>
-            <b>Introduction:</b><br> Combined backtracking search and constraint programming to find optimal instruction schedule that used minimal number of registers. By providing effective constraints, we could find optimal solutions for basic blocks with up to about one-hundred and fifty instructions.<br><br>
-          </div></article>
-        </div>
-        <ol class="portfolio_tags"> <li><a href="#">C++</a></li> <li><a href="#">algorithm</a></li> <li><a href="#">research</a></li> <li><a href="#">NTU</a></li> </ol>
-      </section>
-
-	  <section class="area portfolio">
-        <img class="portfolio_thumb_img" alt="" src="#">
-        <a href="#"><div class="portfolio_title"><h2>.Programming with Visual C# 2010 in 16 Lessons</h2><h3>3147X8</h3></div></a>
-		<div class="portfolio_content">
-          <img class="portfolio_content_img" alt="" src="#">
-          <article> <header>.Programming with Visual C# 2010 in 16 Lessons</header><div class="portfolio_exp">
-            <h2>
-              <b>Co-Authors:</b> Chi-Lung Lee, An-Tai Li<br> <b>Chinese Title:</b> Visual C# 2010 程式設計16堂課<br>
-              <b>Publishing:</b> by GOTOP Information Inc.(碁峰資訊) in 04/2011<br> <b>ISBN:</b> 9789862761816 <br>
-              <b>Links:</b> [<a href="http://www.books.com.tw/exep/prod/booksfile.php?item=0010504523" rel="external">博客來</a>]
-            </h2>
-			<b>Introduction:</b><br> A book to help you learn the lastest version of Microsoft Visual C# development package in 16 lessons. With rich console and windows examples, the book provides solid fundamentals of c# programming and complete project building experience. The book is written in Traditional Chinese.
-		  </div></article>
-        </div>
-        <ol class="portfolio_tags"> <li><a href="#">C#</a></li> <li><a href="#">book</a></li> <li><a href="#">indie</a></li> </ol>
-	  </section>
-
-	  <section class="area portfolio">
-        <img class="portfolio_thumb_img" alt="" src="#">
-        <a href="#"><div class="portfolio_title"><h2>.unofficial Google Images instant</h2><h3>pYcQTH</h3></div></a>
-		<div class="portfolio_content">
-          <img class="portfolio_content_img" alt="" src="#"> 
-          <article> <header>.unofficial Google Images instant</header><div class="portfolio_exp">
-          <h2><b>Links:</b> [<a href="http://apps.clydeli.com/gi_instant" rel="external">website</a>]</h2>
-          <b>Introduction:</b><br>
-			A quick web application which is apparently inspired by Google Instant. Search results display on-the-fly when user input query strings. Google web search API is used.<br><br>
-            update: Google has officially launched their beta test of Google Images Instant and Google Web Search API is also deprecated. So this site will not be updated in the future.
-          </div></article>
-        </div>
-        <ol class="portfolio_tags">
-          <li><a href="#">HTML</a></li> <li><a href="#">CSS</a></li> <li><a href="#">JS</a></li> <li><a href="#=">web_dev</a></li> <li><a href="#">indie</a></li>
-        </ol>
-	  </section>
-
-	  <section class="area portfolio">
-        <img class="portfolio_thumb_img" alt="" src="#">
-        <a href="#"><div class="portfolio_title"><h2>.ARble Maze</h2><h3>WEFFKN</h3></div></a>
-		<div class="portfolio_content">
-          <img class="portfolio_content_img" alt="" src="#"> 
-          <article> <header>.ARble Maze</header><div class="portfolio_exp">
-            <h2>
-              <b>Team Members:</b> Ming-Lun Chou, An-Tai Li, Zhan-Rong Kuo<br><b>Role:</b> Toolkits Linking, System Integration and Stage Design<br>
-              <b>Course:</b> Network and Multimedia Lab<br> <b>Instructor:</b> Professor Hung-Yu Wei, Ph.D.<br>
-              <b>additional images:</b><br>
-                <img class="content_thumb_img" alt="" src="imgs/portf_WEFFKN_1.jpg">
-                <img class="content_thumb_img" alt="" src="imgs/portf_WEFFKN_2.jpg">
-                <img class="content_thumb_img" alt="" src="imgs/portf_WEFFKN_3.jpg">
-            </h2>
-            <b>Introduction:</b><br> Developed augmented reality marble maze game written in Java. User controls the maze through webcam. Program is written in Java with NyARToolkit(Augmented Reality), JBox2D(Physics), JMonkey(3D Graphic) libraries.<br><br>
-          </div></article>
-        </div>
-        <ol class="portfolio_tags">
-          <li><a href="#">Java</a></li> <li><a href="#">game</a></li> <li><a href="#">UI</a></li> <li><a href="#=">project</a></li> <li><a href="#">NTU</a></li>
-        </ol>
-	  </section>
-
-      <section class="area portfolio">
-        <img class="portfolio_thumb_img" alt="" src="#">
-        <a href="#"><div class="portfolio_title"><h2>.CPU with Crypto Instructions</h2><h3>6h7Ldl</h3></div></a>
-        <div class="portfolio_content">
-          <img class="portfolio_content_img" alt="" src="#">
-          <article> <header>.CPU with Crypto Instructions</header><div class="portfolio_exp">
-            <h2> <b>Research Members:</b> Jakub Szefer, Ming-Shing Chen, An-Tai Li<br> <b>Advisor:</b> Professor Chen-Mou Cheng, Ph.D.<br> </h2>
-            <b>Introduction:</b><br> Designed and implemented a CPU in hardware description level with built-in special designed instructions for Crypto, targeting on AES/MPKC.<br><br>
-          </div></article>
-        </div>
-        <ol class="portfolio_tags"> <li><a href="#">verilog</a></li> <li><a href="#">architecture</a></li> <li><a href="#">research</a></li> <li><a href="#">NTU</a></li> </ol>
-      </section>
-
-	  <section class="area portfolio">
-        <img class="portfolio_thumb_img" alt="" src="#">
-        <a href="#"><div class="portfolio_title"><h2>.Taipei Metro Pricing Query System</h2><h3>KJnFjN</h3></div></a>
-		<div class="portfolio_content">
-          <img class="portfolio_content_img" alt="" src="#"> 
-          <article> <header>.Taipei Metro Pricing Query System</header><div class="portfolio_exp">
-            <h2>
-              <b>Team Members:</b> Ping-Han Soh, An-Tai Li, Jia-Xun Zheng<br>
-              <b>Role:</b> GUI Design and Programming<br>
-              <b>Course:</b> Embedded System Lab<br>
-              <b>Instructor:</b> Professor Sheng-De Wang, Ph.D.<br>
-              <b>Links:</b> [<a href="https://picasaweb.google.com/clyde1008li/20090626?feat=directlink">album</a>]<br>
-              <b>additional images:</b><br>
-                <img class="content_thumb_img" alt="" src="https://lh6.googleusercontent.com/-079Qj_NVWNI/SpFp8uZemjI/AAAAAAAAFU0/_y3V0FdYntw/s400/20090626006.jpg">
-                <img class="content_thumb_img" alt="" src="https://lh4.googleusercontent.com/-JaWXAT0i0qw/SpFqIDR6wPI/AAAAAAAAFVM/cdpdGljT7S8/s400/20090626012.jpg">
-                <img class="content_thumb_img" alt="" src="https://lh6.googleusercontent.com/-3tengWjBg4I/SpFqOm5aBKI/AAAAAAAAFVc/CcquYwzn37k/s400/DSC00391.JPG">
-            </h2>
-            <b>Introduction:</b><br> Created Taipei Metro price information query system written in C (with QT4 library) and executed on PXA300, an embedded system with touch screen.<br><br>
-          </div></article>
-        </div>
-        <ol class="portfolio_tags">
-          <li><a href="#">C</a></li> <li><a href="#">UI</a></li> <li><a href="#=">project</a></li> <li><a href="#">NTU</a></li>
-        </ol>
-	  </section>
-
-	  <section class="area portfolio">
-        <img class="portfolio_thumb_img" alt="" src="#">
-        <a href="#"><div class="portfolio_title"><h2>.Making Things Easy with Google</h2><h3>9Udy2X</h3></div></a>
-        <div class="portfolio_content">
-          <img class="portfolio_content_img" alt="" src="#">
-          <article> <header>.Making Things Easy with Google</header><div class="portfolio_exp">
-            <h2>
-              <b>Co-Authors:</b> Chi-Lung Lee, An-Tai Li<br> <b>Chinese Title:</b> 用Google輕鬆過生活<br>
-              <b>Publishing:</b> by GrandTech Information Co.(上奇資訊) in 11/2008<br> <b>ISBN:</b> 9789866587306 <br>
-			  <b>Links:</b> [<a href="http://www.books.com.tw/exep/prod/booksfile.php?item=0010421376" rel="external">博客來</a>]
-            </h2>
-            <b>Introduction:</b><br> The book makes in-depth introductions to several web applications and services provided by Google. See how these Google products can help you and how you can benefit from them in daily life. The book is written in Traditional Chinese.
-          </div></article>
-        </div>
-        <ol class="portfolio_tags"> <li><a href="#">book</a></li> <li><a href="#">indie</a></li> </ol>
-	  </section>
--->
-
+		</ol></section>
 
 <!-- misc pieces -->
-      <section id="misc" class="area">
-      	<ol id="misc_fns">
-          <li><div class="misc_fn">.background.random( )</div></li>
-          <li><div class="misc_fn">.background.next( )</div></li>
-        </ol>
-        <ol><li>
-          <article><header>.compatibility_tested</header><div>Chrome 23, Firefox 17, IE 10</div></article>
-          <article><header>.source</header><div><a href="https://github.com/clydeli/about.clydeli">about.clydeli on GitHub</a></div></article>
-          <!--<article><header>.last_updated</header><div>Aug. 19, 2012</div></article>-->
-        </li></ol>
-      </section>
+		<section id="misc" class="area">
+			<ol id="misc_fns">
+				<li><div class="misc_fn fn_buttons">.background.random( )</div></li>
+				<li><div class="misc_fn fn_buttons">.background.next( )</div></li>
+			</ol>
+			<ol>
+				<li><article><header>.compatibility_tested</header><div>Chrome 24, Firefox 18, IE 10</div></article></li>
+				<li><article><header>.source</header><div><a href="https://github.com/clydeli/about.clydeli">about.clydeli on GitHub</a></div></article></li>
+			</ol>
+		</section>
 
-	</div> 
+	</div>
 	<!-- end of main area div-->
 
 
@@ -375,7 +221,20 @@ Links: [<a href="http://www.books.com.tw/exep/prod/booksfile.php?item=0010504523
 	  <span class="bg_info"> </span>
 	</footer>
   </div></div>
-  <footer id='copyright_footer'>designed by An-Tai Li (clydeli) &copy; <time datetime="2013-01-10">2013</time></footer>
+  <footer id='copyright_footer'>designed by An-Tai Li (clydeli) &copy; <time datetime="2013-02-06">2013</time></footer>
+
+  <!-- google analytics -->
+	<script>
+		var _gaq = _gaq || [];
+		_gaq.push(['_setAccount', 'UA-4130309-3']);
+		_gaq.push(['_trackPageview']);
+		(function() {
+			var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+			ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+			var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+		})();
+	</script>
+
 </body>
 </html>
 <!-- todo: load on demand, lightbox, bg/section changer (indicator/keyboard), show all in one page, instagram filter (in portfolio), fixed a few bg img as first enter choices, use em instead of px-->

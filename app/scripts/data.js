@@ -1,6 +1,25 @@
 var clydeli = clydeli || {}; 
 clydeli.Data = {};
 
+// Background image information
+clydeli.Data.BG_imgList = [
+	new clydeli.Type.bg_img('https://lh3.googleusercontent.com/-5y1dQeU3yYw/TjJ7aDf8aXI/AAAAAAAAKBE/wxGVszezlAc/s1440/P1010606.JPG', '<a href="https://plus.google.com/photos/106431348054423810177/albums/5634698332240377633/5634701771340015986" >Shanghai, China  Aug. 2010 </a>', 3/4, 0.55),
+	new clydeli.Type.bg_img('https://lh5.googleusercontent.com/-zFqyF61Qv6s/TSk_1i5e9_I/AAAAAAAAIao/QFGK2_iM4Yw/s1440/20100731836.jpg', '<a href="https://plus.google.com/photos/106431348054423810177/albums/5560041465274782513/5560045404099114994" >Tokyo, Japan  Jul. 2010 </a>', 3/4, 0.6),
+	new clydeli.Type.bg_img('https://lh3.googleusercontent.com/-Tx8HuKsKgRE/SOJE5vsy8II/AAAAAAAACeE/bhkT8AGNAsc/s1440/20080824868.jpg', '<a href="https://plus.google.com/photos/106431348054423810177/albums/5251833612796485585/5251835874315006082" >Alishan, Taiwan  Aug. 2008 </a>', 3/4, 0.65),
+	new clydeli.Type.bg_img('https://lh4.googleusercontent.com/-g2m2CwCxBb0/TCyjVNdnKEI/AAAAAAAAGbs/mM3s5dm_V3o/s1440/20100630527.jpg', '<a href="https://plus.google.com/photos/106431348054423810177/albums/5488941284228439281/5488941630644234306?authkey=CKiw89DP_vWYNg" >Google Taiwan  Jun. 2010 </a>', 0.75, 0.6),
+	new clydeli.Type.bg_img('https://lh4.googleusercontent.com/-qAPXCuFQ4X4/TU1oHPLax4I/AAAAAAAAJMQ/eNsnuaawGOU/s1440/20100622507.jpg', '<a href="https://plus.google.com/photos/106431348054423810177/albums/5570209861323780065/5570222787669968770" >HSNU, Taiwan  Jun. 2010 </a>', 3/4, 0.3),
+	new clydeli.Type.bg_img('https://lh3.googleusercontent.com/-WKls_I1sTvI/SODl7NqSa7I/AAAAAAAACVU/lWIFgScJ0qU/s1440/20080813769.jpg', '<a href="https://plus.google.com/photos/106431348054423810177/albums/5251446656504758577/5251449970956069810" >Bitoujiao, Taiwan  Aug. 2008 </a>', 3/4, 0.5),
+	new clydeli.Type.bg_img('https://lh4.googleusercontent.com/-MWw7U58wmy4/UCnrIgVj6JI/AAAAAAAAPu8/klDwpEALN0A/s1440/P1130116.JPG', '<a href="https://plus.google.com/photos/106431348054423810177/albums/5776405569811745793/5776406528431220882" >Taipei, Taiwan  Sep. 2012 </a>', 9/16, 0.5)
+];
+
+// Portfolio tags information
+clydeli.Data.tagsInfo = new clydeli.Type.tags_info();
+clydeli.Data.tagsInfo.insert_type('lang', 'LightBlue', ['C','C++','C#','Java','HTML','CSS','JS','RoR','verilog']);
+clydeli.Data.tagsInfo.insert_type('field', 'LightCoral', ['web','architecture','UI','algorithm','game']);
+clydeli.Data.tagsInfo.insert_type('type', 'Khaki', ['research','project','book']);
+clydeli.Data.tagsInfo.insert_type('genre', 'LightGreen', ['indie','NTU', 'Intel-NTU', 'CMU']);
+
+// Portfolio data
 clydeli.Data.Portfolio = [
 {
 	md5_pid: "bdf4c539998cc14284400711b8d4dbc1",

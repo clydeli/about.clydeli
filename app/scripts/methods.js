@@ -1,11 +1,15 @@
+var clydeli = clydeli || {};
+clydeli.Core = {};
 
 // Portofolio collapse/expand functions
-function COLLPASE_PORTFOLIO(is_all, p_id){
-	var selector = (is_all)? '.portfolio':'#p_id_'+p_id;
+clydeli.Core.collapsePortfolio = function(p_id){
+	var selector = (p_id === undefined)? '.portfolio':'#p_id_'+p_id;
 	$(selector).removeClass('p_expanded');
+	self.document.location.hash = "!p=portfolio"; // temporary hack for resetting hash
 }
-function EXPAND_PORTFOLIO(p_id){
-	COLLPASE_PORTFOLIO(true);
+
+clydeli.Core.expandPortfolio = function(p_id){
+	clydeli.Core.collapsePortfolio();
 	$('#p_id_'+p_id).addClass('p_expanded');
 	//$('#portfolio_tags_cloud').after($('#p_id_'+p_id)); // if move to first
 	// fadeIn effect
@@ -15,79 +19,82 @@ function EXPAND_PORTFOLIO(p_id){
 }
 
 // Portofolio filter/refresh functions
-function FILTER_PORTFOLIO_TAGS(tag_name){
-  var is_checked = clydeli.Data.tagsInfo.get_name_checked(tag_name);
-  $('#portfolio_tags_cloud .portfolio_tags li').each( function(){
-    if($(this).text() == tag_name){
-      if(is_checked){ $(this).addClass('checked'); }
-      else{ $(this).removeClass('checked'); }
-    }
-  });
+clydeli.Core.filterPortfolioTags = function(tag_name){
+	var is_checked = clydeli.Data.tagsInfo.get_name_checked(tag_name);
+	$('#portfolio_tags_cloud .portfolio_tags li').each( function(){
+		if($(this).text() == tag_name){
+			if(is_checked){ $(this).addClass('checked'); }
+			else{ $(this).removeClass('checked'); }
+			return false; // End iterating
+		}
+	});
 
-  var matched_pid_list = clydeli.Data.tagsInfo.get_pid_list(tag_name);
-  for(var i=matched_pid_list.length; i>=0; --i){
-    var should_hide = true;
-    $('#p_id_'+matched_pid_list[i]+' .portfolio_tags li').each( function(){
-      if($(this).text() == tag_name){
-        if(is_checked){
-          $(this).addClass('checked');
-          //$('#portfolio_tags_cloud').after($('#p_id_'+matched_pid_list[i]));
-        } else { $(this).removeClass('checked'); }
-      }
-      if($(this).hasClass('checked')){ should_hide = false; }
-    });
-    if(should_hide){ $('#p_id_'+matched_pid_list[i]).fadeOut("slow"); }
-    else{ $('#p_id_'+matched_pid_list[i]).fadeIn("slow"); }
-  }
+	var matched_pid_list = clydeli.Data.tagsInfo.get_pid_list(tag_name);
+	for(var i=matched_pid_list.length; i>=0; --i){
+		var should_hide = true, target_found = false;
+		$('#p_id_'+matched_pid_list[i]+' .portfolio_tags li').each( function(){
+			if(!target_found && $(this).text() == tag_name){
+				if(is_checked){
+					$(this).addClass('checked');
+					//$('#portfolio_tags_cloud').after($('#p_id_'+matched_pid_list[i]));
+				} else { $(this).removeClass('checked'); }
+				target_found = true;
+			}
+			if($(this).hasClass('checked')){ should_hide = false; }
+		});
+		if(should_hide){ $('#p_id_'+matched_pid_list[i]).fadeOut("slow"); }
+		else{ $('#p_id_'+matched_pid_list[i]).fadeIn("slow"); }
+	}
 }
-function REFRESH_PORTFOLIO_DISPLAY(){
-  $('.portfolio').each( function(){
-    var should_hide = true;
-    $(this).find('.portfolio_tags li').each( function(){
-      if($(this).hasClass('checked')){ should_hide = false; }
-    });
-    if(should_hide){ $(this).hide(); }
-    else{ $(this).show(); }
-  });
-  $('#portfolio_tags_cloud').css("margin-bottom", $('#main_frame').prop('scrollHeight')-$('#portfolio_tags_cloud').height()-60+"px");
+
+clydeli.Core.refreshPortfolioDisplay = function(){
+	$('.portfolio').each( function(){
+		var should_hide = true;
+		$(this).find('.portfolio_tags li').each( function(){
+			if($(this).hasClass('checked')){
+				should_hide = false;
+				return false; // End iterating
+			}
+		});
+		if(should_hide){ $(this).hide(); }
+		else{ $(this).show(); }
+	});
+	$('#portfolio_tags_cloud').css("margin-bottom", $('#main_frame').prop('scrollHeight')-$('#portfolio_tags_cloud').height()-60+"px");
 }
 
 
 // Display functions
-function SHOW_AREA(hash_vars) {
-  // navbar manipulation
-  $('#menu_header ul li').removeClass("active");
-  $('#'+hash_vars.p+'_btn').addClass("active");
+clydeli.Core.showArea = function(hash_vars) {
+	// navbar manipulation
+	$('#menu_header ul li').removeClass("active");
+	$('#'+hash_vars.p+'_btn').addClass("active");
 
-  // clearout areas
-  $('.area').hide();
+	// clearout areas
+	$('.area').hide();
 
-  switch(hash_vars.p){
-    case 'vitae':
-      $('#vitae').fadeIn('slow');
-      break;
-    case 'portfolio':
-      COLLPASE_PORTFOLIO(true);
-      $('#portfolio_tags_cloud, .portfolio').fadeIn('slow');
-      REFRESH_PORTFOLIO_DISPLAY();
-      if(hash_vars.p_id !== undefined){
-        // Ensure that content img is loaded before expansion
-        //$('#p_id_'+hash_vars['p_id']+' .portfolio_content_img')[0].onload  = function() { EXPAND_PORTFOLIO(hash_vars['p_id']); }
-        EXPAND_PORTFOLIO(hash_vars.p_id);
-      }
-
-      break;
-    case 'misc':
-      $('#misc').fadeIn('slow');
-      break;
-    default:
-      $('#home_btn').addClass("active");
-      $('#about_profile, #about_text').fadeIn('slow');
-      break;
-  }
+	switch(hash_vars.p){
+		case 'vitae':
+			$('#vitae').fadeIn('slow');
+			break;
+		case 'portfolio':
+			clydeli.Core.collapsePortfolio();
+			$('#portfolio_tags_cloud, .portfolio').fadeIn('slow');
+			clydeli.Core.refreshPortfolioDisplay();
+			if(hash_vars.p_id !== undefined){
+				clydeli.Core.expandPortfolio(hash_vars.p_id);
+			}
+			break;
+		case 'misc':
+			$('#misc').fadeIn('slow');
+			break;
+		default:
+			$('#home_btn').addClass("active");
+			$('#about_profile, #about_text').fadeIn('slow');
+			break;
+	}
 }
 
-function BG_CROPPING(){
+clydeli.Core.bgCropping = function(){
   // Position the horizontal frame
   $('#hor_frame').css('height', $('body').width()*27/64+'px').css('top', ($('body').height()-$('#hor_frame').height())/3 );
   $('#copyright_footer').css('top', ($('body').height()-$('#hor_frame').height())/3+ 'px');
@@ -96,8 +103,8 @@ function BG_CROPPING(){
   $('#bg_frame').css('height', $('#hor_frame').height()+'px'); // CHROME DEV HACK
   // Calculate and position(center-aligning) background img
   var
-  	neg_offset = -($('#bg_frame').width()*clydeli.Data.BG_imgList[BG_NUM].get_ratio()*clydeli.Data.BG_imgList[BG_NUM].get_center() - $('#bg_frame').height()/2),
-  	pos_offset = $('#bg_frame').width()*clydeli.Data.BG_imgList[BG_NUM].get_ratio()-$('#bg_frame').height();
+  	neg_offset = -($('#bg_frame').width()*clydeli.Data.BG_imgList[clydeli.Data.BG_Num].get_ratio()*clydeli.Data.BG_imgList[clydeli.Data.BG_Num].get_center() - $('#bg_frame').height()/2),
+  	pos_offset = $('#bg_frame').width()*clydeli.Data.BG_imgList[clydeli.Data.BG_Num].get_ratio()-$('#bg_frame').height();
 
   if(pos_offset < -neg_offset){ neg_offset = -pos_offset; }
   var bg_pos = (neg_offset >= 0)? '0 0':'0 '+neg_offset+'px';

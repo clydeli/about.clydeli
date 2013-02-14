@@ -1,5 +1,8 @@
-var clydeli = clydeli || {}; 
+var clydeli = clydeli || {};
 clydeli.Data = {};
+
+// Current Background Image Number
+clydeli.Data.BG_Num = 0;
 
 // Background image information
 clydeli.Data.BG_imgList = [
@@ -17,7 +20,7 @@ clydeli.Data.tagsInfo = new clydeli.Type.tags_info();
 clydeli.Data.tagsInfo.insert_type('lang', 'LightBlue', ['C','C++','C#','Java','HTML','CSS','JS','RoR','verilog']);
 clydeli.Data.tagsInfo.insert_type('field', 'LightCoral', ['web','architecture','UI','algorithm','game']);
 clydeli.Data.tagsInfo.insert_type('type', 'Khaki', ['research','project','book']);
-clydeli.Data.tagsInfo.insert_type('genre', 'LightGreen', ['indie','NTU', 'Intel-NTU', 'CMU']);
+clydeli.Data.tagsInfo.insert_type('genre', '#97CCB6', ['indie','NTU', 'Intel-NTU', 'CMU']);
 
 // Portfolio data
 clydeli.Data.Portfolio = [
@@ -28,11 +31,11 @@ clydeli.Data.Portfolio = [
 	status: { active: false, date: "Jan. 2013", highlighted: false, content_img_offset: 0 },
 	meta_expansion:
 		[ { label: "Image Source", content: "<a href='https://plus.google.com/photos/117024013652739364944/albums/5808159325279907217?banner=pwa'>DMI Workshop 2012</a>" } ],
-	links : 
+	links :
 		[ { label: "CMU DMI", href: "http://www.cmu.edu/silicon-valley/dmi/index.html" },
 			{ label: "news appearance", href: "http://abclocal.go.com/kgo/story?section=news/local/south_bay&id=8873344" },
 			{ label: "NASA press release", href: "http://www.nasa.gov/centers/ames/news/releases/2012/M12-80.html"} ],
-	images: 
+	images:
 		[ "https://lh3.googleusercontent.com/-TlUtnLN0b4o/UJrYRgeX8KI/AAAAAAAA55A/SX5rWXR6VkM/s800/DSC_0489.JPG",
 			"https://lh5.googleusercontent.com/-_Jw_8_vwOwQ/UJrYVBGLgZI/AAAAAAAA55o/YKsgdML1n1A/s800/DSC_0497.JPG",
 			"https://lh6.googleusercontent.com/-jIOiFXnI3ow/UJrYYS2HjpI/AAAAAAAA56Y/U_c-hRIx6-4/s800/DSC_0506.JPG",
@@ -66,7 +69,7 @@ clydeli.Data.Portfolio = [
 	title: "Google Chrome Extensions",
 	header: "Google Chrome Extensions",
 	status: { active: true, highlighted: false, content_img_offset: 0 },
-	meta_expansion : [ 
+	meta_expansion : [
 		{ label: "Links", content: "<br>[<a href='https://chrome.google.com/webstore/detail/force-redraw-img-on-html5/dknhfjmchnkkioajjfplfghahjddedpb'>Force Redraw IMG on HTML5 Canvas</a>]<br>[<a href='https://chrome.google.com/webstore/detail/language-filter-for-your/kbbdopdpfkgjkcggfajenancnnecdbgk'>Language Filter for your Social Websites</a>]" } ],
 	introduction: 'Some random Javascripts extensions (generally userscripts) wrote for use with Google Chrome. "Force Redraw IMG on HTML5 Canvas" redraws all IMG elements using HTML5 Canvas, forcing GPU to handle the work. "Language Filter for your Social Websites" helps filter contents of specified languages in your social websites stream.',
 	tags: ["JS", "web", "indie"]
@@ -76,7 +79,7 @@ clydeli.Data.Portfolio = [
 	title: "Incremental image loading by accumulating differences",
 	header: "Incremental image loading by accumulating differences",
 	status: { active: true, highlighted: false, content_img_offset: 0 },
-	meta_expansion : [ 
+	meta_expansion : [
 		{ label: "Source", content: "Source code for testing propose would be available when ready." } ],
 	introduction: 'This independent research focus on finding an incremental algorithm/mechanism to let webpages load high resolution images little by little instead of download complete new image files.  HTML5 canvas is used as the main tool for manipulating images in this project.',
 	tags: ["HTML", "JS", "web", "research", "indie"]
@@ -134,7 +137,7 @@ clydeli.Data.Portfolio = [
 			{ label: "Role", content: "Toolkits Linking, System Integration and Stage Design" },
 			{ label: "Course", content: "Network and Multimedia Lab" },
 			{ label: "Instructor", content: "Professor Hung-Yu Wei, Ph.D." } ],
-	images: 
+	images:
 		[ "imgs/portf_WEFFKN_1.jpg", "imgs/portf_WEFFKN_2.jpg", "imgs/portf_WEFFKN_3.jpg" ],
 	introduction: 'Developed augmented reality marble maze game written in Java. Users control the maze through webcam. Program is written in Java with NyARToolkit(Augmented Reality), JBox2D(Physics), JMonkey(3D Graphic) libraries.',
 	tags: ["Java", "game", "UI", "project", "NTU"]

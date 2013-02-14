@@ -2,7 +2,7 @@
 
 // Randomize a background image
 var now = new Date();
-var BG_NUM = Math.floor(Math.random(now.getSeconds())*clydeli.Data.BG_imgList.length);
+clydeli.Data.BG_Num = Math.floor(Math.random(now.getSeconds())*clydeli.Data.BG_imgList.length);
 
 $(document).ready(function(){
 
@@ -84,11 +84,11 @@ $(document).ready(function(){
   });
 
   // Background image settings
-  $('#bg_frame, #hor_frame').css('background-image', 'url('+clydeli.Data.BG_imgList[BG_NUM].get_src()+')');
-  $('#page_footer .bg_info').append(clydeli.Data.BG_imgList[BG_NUM].get_info());
-  BG_CROPPING();
+  $('#bg_frame, #hor_frame').css('background-image', 'url('+clydeli.Data.BG_imgList[clydeli.Data.BG_Num].get_src()+')');
+  $('#page_footer .bg_info').append(clydeli.Data.BG_imgList[clydeli.Data.BG_Num].get_info());
+  clydeli.Core.bgCropping();
 
-  $(window).resize(function() { BG_CROPPING(); });
+  $(window).resize(function() { clydeli.Core.bgCropping(); });
 
   // Decode hash tag information
   var hash_vars = [];
@@ -97,7 +97,7 @@ $(document).ready(function(){
     var hash_var = hashes[i].split('=');
     hash_vars[hash_var[0]] = hash_var[1];
   }
-  SHOW_AREA(hash_vars);
+  clydeli.Core.showArea(hash_vars);
 
   // Listen on popstate event
   /*window.onpopstate = function(){
@@ -107,31 +107,30 @@ $(document).ready(function(){
       var hash_var = hashes[i].split('=');
       hash_vars[hash_var[0]] = hash_var[1];
     }
-    SHOW_AREA(hash_vars);
+    clydeli.Core.showArea(hash_vars);
   }*/
 
   // Menu button triggers
   $('#menu_header nav ul li').click(function() {
-    SHOW_AREA( {"p": $(this).attr('id').slice(0, -4)} );
+    clydeli.Core.showArea( {"p": $(this).attr('id').slice(0, -4)} );
   });
 
   // Portfolio triggers
   $("#main_frame").on("click", ".portfolio .portfolio_title", function(){
-    EXPAND_PORTFOLIO( $(this).parents('.portfolio').attr('id').slice(5) );
+    clydeli.Core.expandPortfolio( $(this).parents('.portfolio').attr('id').slice(5) );
   });
   $("#main_frame").on("click", ".portfolio .portfolio_fn", function(){
-    COLLPASE_PORTFOLIO(false, $(this).parents('.portfolio').attr('id').slice(5) );
-    REFRESH_PORTFOLIO_DISPLAY();
+    clydeli.Core.collapsePortfolio($(this).parents('.portfolio').attr('id').slice(5) );
+    clydeli.Core.refreshPortfolioDisplay();
   });
   $('.portfolio_tags li').click(function() {
-    COLLPASE_PORTFOLIO(true);
-    REFRESH_PORTFOLIO_DISPLAY();
+    clydeli.Core.collapsePortfolio();
+    clydeli.Core.refreshPortfolioDisplay();
     clydeli.Data.tagsInfo.set_name_checked('toggle', $(this).text());
-    FILTER_PORTFOLIO_TAGS($(this).text());
-    //REFRESH_PORTFOLIO_DISPLAY();
+    clydeli.Core.filterPortfolioTags($(this).text());
   });
   $('#portfolio_tags_cloud .portfolio_fn').click(function(){
-    COLLPASE_PORTFOLIO(true);
+    clydeli.Core.collapsePortfolio();
     switch($(this).text()){
       case '.select("all")':
         clydeli.Data.tagsInfo.set_name_checked("all");
@@ -150,23 +149,25 @@ $(document).ready(function(){
   $(".portfolio .content_thumb_img").hover( function() {
     $('#pop_img').css('top', $(this).offset().top).css('left', $(this).offset().left+$(this).width()+2);
     $("#pop_img img").attr("src", $(this).attr("href"));
-    $("#pop_img").stop(true, true).fadeIn("normal");
-  }, function() { $("#pop_img").fadeOut("normal"); });
+    $("#pop_img").removeClass("hidden")
+  }, function() {
+  	$("#pop_img").addClass("hidden")
+  });
 
   // misc function triggers
   $('#misc .misc_fn').click(function(){
     switch($(this).text()){
       case '.background.random( )':
-        BG_NUM = Math.floor(Math.random(now.getSeconds())*clydeli.Data.BG_imgList.length);
+        clydeli.Data.BG_Num = Math.floor(Math.random(now.getSeconds())*clydeli.Data.BG_imgList.length);
         break;
       case '.background.next( )':
-        BG_NUM = (BG_NUM+1) % clydeli.Data.BG_imgList.length;
+        clydeli.Data.BG_Num = (clydeli.Data.BG_Num+1) % clydeli.Data.BG_imgList.length;
         break;
     }
     if ($(this).text().slice(1,11) == 'background'){
-      $('#bg_frame, #hor_frame').css('background-image', 'url('+clydeli.Data.BG_imgList[BG_NUM].get_src()+')');
-      $('#page_footer .bg_info').html(clydeli.Data.BG_imgList[BG_NUM].get_info());
-      BG_CROPPING();
+      $('#bg_frame, #hor_frame').css('background-image', 'url('+clydeli.Data.BG_imgList[clydeli.Data.BG_Num].get_src()+')');
+      $('#page_footer .bg_info').html(clydeli.Data.BG_imgList[clydeli.Data.BG_Num].get_info());
+      clydeli.Core.bgCropping();
     }
   });
 

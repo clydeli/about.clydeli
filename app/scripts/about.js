@@ -90,6 +90,12 @@ $(document).ready(function(){
 
   $(window).resize(function() { clydeli.Core.bgCropping(); });
 
+  // Workaround for stopping drag triggers scroll
+  $('#bg_frame').on('mousedown', '#main_frame', function(e){
+    $(e.target).focus();
+    e.preventDefault();
+	});
+
   // Decode hash tag information
   var hash_vars = [];
   var hashes = unescape(self.document.location.hash.slice(2)).split('&');

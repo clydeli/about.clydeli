@@ -15,7 +15,8 @@ html { height: 100%; }
 body {
   min-width: 1016px; width:100%; height:100%; margin: 0px;
   font-family: 'Philosopher', sans-serif;
-  background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAIAAAACCAYAAABytg0kAAAABHNCSVQICAgIfAhkiAAAABtJREFUCJljVFJS+v/+/XsGpvfv3zMICgoyAABKWAc2EiqdJAAAAABJRU5ErkJggg==);
+  background-color: #111;
+  //background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAIAAAACCAYAAABytg0kAAAABHNCSVQICAgIfAhkiAAAABtJREFUCJljVFJS+v/+/XsGpvfv3zMICgoyAABKWAc2EiqdJAAAAABJRU5ErkJggg==);
   overflow:hidden;
 }
 b { font-weight: 700; }

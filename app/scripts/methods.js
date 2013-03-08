@@ -118,7 +118,7 @@ clydeli.Core = {
 		$('#menu_header, #page_footer').css('left', ($('#bg_frame').width()-$('#hor_frame').width())/2+'px');
 
 		// Make right float compatible with 104% scroll hide HACK
-		$('#misc').css('margin-right', $('#main_frame').width()-$('#bg_frame').width()+16);
+		//$('#misc').css('margin-right', $('#main_frame').width()-$('#bg_frame').width()+16);
 	}
 
 };

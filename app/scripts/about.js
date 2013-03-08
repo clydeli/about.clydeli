@@ -1,8 +1,7 @@
 
 
 // Randomize a background image
-var now = new Date();
-clydeli.Data.BG_Num = Math.floor(Math.random(now.getSeconds())*clydeli.Data.BG_imgList.length);
+clydeli.Data.BG_Num = Math.floor(Math.random((new Date()).getSeconds())*clydeli.Data.BG_imgList.length);
 
 $(document).ready(function(){
 
@@ -86,11 +85,12 @@ $(document).ready(function(){
   // Background image settings
   $('#bg_frame, #hor_frame').css('background-image', 'url('+clydeli.Data.BG_imgList[clydeli.Data.BG_Num].get_src()+')');
   $('#page_footer .bg_info').append(clydeli.Data.BG_imgList[clydeli.Data.BG_Num].get_info());
+  $('#hor_frame').css('opacity', 1);
   clydeli.Core.bgCropping();
 
   $(window).resize(function() { clydeli.Core.bgCropping(); });
 
-  // Workaround for stopping drag triggers scroll
+  // Workaround for stopping drag triggering scroll
   $('#bg_frame').on('mousedown', '#main_frame', function(e){
     $(e.target).focus();
     e.preventDefault();

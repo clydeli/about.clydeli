@@ -5,6 +5,15 @@ clydeli.Data.BG_Num = Math.floor(Math.random((new Date()).getSeconds())*clydeli.
 
 $(document).ready(function(){
 
+	// Check manifest cache update
+	$(window.applicationCache).on('updateready', function(){
+		if(window.applicationCache.status === window.applicationCache.UPDATEREADY){
+			console.log("Site cache updated, now reloading...");
+			window.applicationCache.swapCache();
+			window.location.reload();
+		}
+	});
+
   // Generate portfolio HTML
   for(var i=clydeli.Data.Portfolio.length-1; i>=0; --i){
     var p_id = clydeli.Data.Portfolio[i].md5_pid;
@@ -164,7 +173,7 @@ $(document).ready(function(){
   $('#misc .misc_fn').click(function(){
     switch($(this).text()){
       case '.background.random( )':
-        clydeli.Data.BG_Num = Math.floor(Math.random(now.getSeconds())*clydeli.Data.BG_imgList.length);
+        clydeli.Data.BG_Num = Math.floor(Math.random((new Date()).getSeconds())*clydeli.Data.BG_imgList.length);
         break;
       case '.background.next( )':
         clydeli.Data.BG_Num = (clydeli.Data.BG_Num+1) % clydeli.Data.BG_imgList.length;

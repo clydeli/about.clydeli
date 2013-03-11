@@ -52,7 +52,7 @@ clydeli.Data.Portfolio = [
 	status: { active: false, date: "Sep. 2012", highlighted: false, content_img_offset: 0 },
 	links : [ { label: "website", href: "http://shelv.herokuapp.com/" } ],
 	introduction: 'A one-week Ruby on Rails practice application as an initial assignment of my CMU foundation course.  The music library is powered by <a href="http://last.fm/">last.fm</a>.  Users can register at SHELV and add/manage music albums they own to showcase their album collection on the Internet.',
-	tags: ["HTML", "CSS", "JS", "RoR", "web", "CMU"]
+	tags: ["HTML", "CSS", "JS", "RoR", "web", "project", "CMU"]
 },
 {
 	md5_pid: "dc95388b403a2ebd4a215dd165198938",
@@ -91,7 +91,7 @@ clydeli.Data.Portfolio = [
 	status: { active: false, date: "Mar. 2012", highlighted: true, content_img_offset: -20 },
 	links : [ { label: "website", href: "http://apps.clydeli.com/tagSearch" } ],
 	introduction: 'Most search engines provide advanced search abilities by using specified operators, however, not every typical user makes use of it. Integrating the idea to the GUI level by transforming keywords to tags with colors make the concept more clear and adaptable. The new interface also provides a more intuitive experience of manipulating and modifying keywords especially for users on devices with touch screens.',
-	tags: ["HTML", "CSS", "JS", "UI", "web", "indie"]
+	tags: ["HTML", "CSS", "JS", "UI", "web", "project", "indie"]
 },
 {
 	md5_pid: "c416e2311cc1b57378f9cb33fccd6fd7",
@@ -125,7 +125,7 @@ clydeli.Data.Portfolio = [
 	status: { active: false, date: "Sep. 2010", highlighted: false, content_img_offset: 0 },
 	links : [ { label: "website", href: "http://apps.clydeli.com/gi_instant" } ],
 	introduction: 'A quick web application which is apparently inspired by Google Instant. Search results display on-the-fly when user input query strings. Google web search API is used.<br><br> update: Google has officially launched their beta test of Google Images Instant and Google Web Search API is also deprecated. So this site will not be updated in the future.',
-	tags: ["HTML", "CSS", "JS", "web", "indie"]
+	tags: ["HTML", "CSS", "JS", "web", "project", "indie"]
 },
 {
 	md5_pid: "59bdf583926b496de784a510f0fb4391",

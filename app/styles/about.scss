@@ -13,11 +13,10 @@ header, section, footer, aside, nav, article, figure { display: block; }
 // Initial setiings
 html { height: 100%; }
 body {
-  min-width: 1016px; width:100%; height:100%; margin: 0px;
-  font-family: 'Philosopher', sans-serif;
-  background-color: #111;
-  //background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAIAAAACCAYAAABytg0kAAAABHNCSVQICAgIfAhkiAAAABtJREFUCJljVFJS+v/+/XsGpvfv3zMICgoyAABKWAc2EiqdJAAAAABJRU5ErkJggg==);
-  overflow:hidden;
+	min-width: 1016px; width:100%; height:100%; margin: 0px;
+	font-family: 'Philosopher', sans-serif;
+	background-color: #111;
+	overflow:hidden;
 }
 b { font-weight: 700; }
 a { text-decoration: none; }
@@ -177,7 +176,8 @@ article header {
 }
 
 .portfolio.p_expanded {
-	width: 600px; max-height:800px; ol { margin: 2px 0 12px 12px; width:500px;}
+	width: 600px; max-height:800px;
+	ol { margin: 2px 0 12px 12px; width:500px;}
 	.portfolio_content { display: block;}
 	.portfolio_thumb_img, .portfolio_title, .portfolio_status { display: none;}
 }

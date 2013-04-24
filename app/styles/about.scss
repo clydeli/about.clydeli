@@ -61,7 +61,7 @@ ol { padding:0; }
 	-webkit-backface-visibility: hidden;
 }
 #menu_header {
- top: 0;
+	top: 0;
 	h1 {
 		float:left; z-index: 1;
 		width: 190px; padding-left: 2px; margin: 0;
@@ -71,16 +71,16 @@ ol { padding:0; }
 		display: inline; opacity: 0.5;
 		a { color: #fff; }
 	}
-}
-#menu_header nav ul {
-	display: block; text-align: center;
-	li { margin:0 0 0 30px; @include vendor-prefix(transition, opacity 300ms ease); }
-	li.active, li:hover { opacity: 1 }
-}
-#menu_header .social_list {
-	float: right; text-align: right; width: 190px;
-	li { margin: 0 5px 0 0; @include vendor-prefix(transition, opacity 300ms ease); }
-	li:hover { opacity: 1; };
+	nav ul {
+		display: block; text-align: center;
+		li { margin:0 0 0 30px; @include vendor-prefix(transition, opacity 300ms ease); }
+		li.active, li:hover { opacity: 1 }
+	}
+	.social_list {
+		float: right; text-align: right; width: 190px;
+		li { margin: 0 5px 0 0; @include vendor-prefix(transition, opacity 300ms ease); }
+		li:hover { opacity: 1; };
+	}
 }
 
 #page_footer {

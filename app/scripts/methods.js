@@ -11,7 +11,7 @@ clydeli.Core = (function(){
 		},
 
 		expandPortfolio = function(p_id){
-			this.collapsePortfolio();
+			collapsePortfolio();
 			$('#p_id_'+p_id).addClass('p_expanded');
 			//$('#portfolio_tags_cloud').after($('#p_id_'+p_id)); // if move to first
 			// fadeIn effect
@@ -79,11 +79,11 @@ clydeli.Core = (function(){
 					$('#vitae').fadeIn('slow');
 					break;
 				case 'portfolio':
-					this.collapsePortfolio();
+					collapsePortfolio();
 					$('#portfolio_tags_cloud, .portfolio').fadeIn('slow');
-					this.refreshPortfolioDisplay();
+					refreshPortfolioDisplay();
 					if(hash_vars.p_id !== undefined){
-						this.expandPortfolio(hash_vars.p_id);
+						expandPortfolio(hash_vars.p_id);
 					}
 					break;
 				case 'misc':
@@ -98,7 +98,7 @@ clydeli.Core = (function(){
 
 		bgCropping = function(){
 			// Position the horizontal frame
-			$('#hor_frame').css('height', $('body').width()*27/64+'px').css('top', ($('body').height()-$('#hor_frame').height())/3 );
+			$('#hor_frame').css('height', $('body').width()*4/9+'px').css('top', ($('body').height()-$('#hor_frame').height())/3 );
 			$('#copyright_footer').css('top', ($('body').height()-$('#hor_frame').height())/3+ 'px');
 			// Position the background frame
 			$('#bg_frame').css('width', $('body').width()*0.95+'px');

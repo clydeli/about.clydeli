@@ -6,7 +6,8 @@ clydeli.Data.BG_Num = 0;
 
 // Background image information
 clydeli.Data.BG_imgList = [
-	new clydeli.Type.bg_img('https://lh3.googleusercontent.com/-5y1dQeU3yYw/TjJ7aDf8aXI/AAAAAAAAKBE/wxGVszezlAc/s1440/P1010606.JPG', '<a href="https://plus.google.com/photos/106431348054423810177/albums/5634698332240377633/5634701771340015986" >Shanghai, China  Aug. 2010 </a>', 3/4, 0.55),
+	//new clydeli.Type.bg_img('https://lh3.googleusercontent.com/-5y1dQeU3yYw/TjJ7aDf8aXI/AAAAAAAAKBE/wxGVszezlAc/s1440/P1010606.JPG', '<a href="https://plus.google.com/photos/106431348054423810177/albums/5634698332240377633/5634701771340015986" >Shanghai, China  Aug. 2010 </a>', 3/4, 0.55),
+	new clydeli.Type.bg_img('https://lh4.googleusercontent.com/-YypRixi8ON8/URSY_eZc_AI/AAAAAAAARso/2nJDYU1go3E/s1440/DSC_1516.jpg', '<a href="https://plus.google.com/photos/106431348054423810177/albums/5842462795263836097/5842462832865377282" >San Francisco, US  Sep. 2012 </a>', 3/4, 0.5),
 	new clydeli.Type.bg_img('https://lh5.googleusercontent.com/-zFqyF61Qv6s/TSk_1i5e9_I/AAAAAAAAIao/QFGK2_iM4Yw/s1440/20100731836.jpg', '<a href="https://plus.google.com/photos/106431348054423810177/albums/5560041465274782513/5560045404099114994" >Tokyo, Japan  Jul. 2010 </a>', 3/4, 0.6),
 	new clydeli.Type.bg_img('https://lh3.googleusercontent.com/-Tx8HuKsKgRE/SOJE5vsy8II/AAAAAAAACeE/bhkT8AGNAsc/s1440/20080824868.jpg', '<a href="https://plus.google.com/photos/106431348054423810177/albums/5251833612796485585/5251835874315006082" >Alishan, Taiwan  Aug. 2008 </a>', 3/4, 0.65),
 	new clydeli.Type.bg_img('https://lh4.googleusercontent.com/-g2m2CwCxBb0/TCyjVNdnKEI/AAAAAAAAGbs/mM3s5dm_V3o/s1440/20100630527.jpg', '<a href="https://plus.google.com/photos/106431348054423810177/albums/5488941284228439281/5488941630644234306?authkey=CKiw89DP_vWYNg" >Google Taiwan  Jun. 2010 </a>', 0.75, 0.6),

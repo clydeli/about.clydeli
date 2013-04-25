@@ -20,11 +20,36 @@ clydeli.Data.BG_imgList = [
 clydeli.Data.tagsInfo = new clydeli.Type.tags_info();
 clydeli.Data.tagsInfo.insert_type('lang', 'LightBlue', ['C','C++','C#','Java','HTML','CSS','JS','RoR','verilog']);
 clydeli.Data.tagsInfo.insert_type('field', 'LightCoral', ['web','architecture','UI','algorithm','game']);
-clydeli.Data.tagsInfo.insert_type('type', 'Khaki', ['research','project','book']);
-clydeli.Data.tagsInfo.insert_type('genre', '#97CCB6', ['indie','NTU', 'Intel-NTU', 'CMU']);
+clydeli.Data.tagsInfo.insert_type('type', 'Khaki', ['research','project','book','hackathon']);
+clydeli.Data.tagsInfo.insert_type('genre', '#97CCB6', ['indie','CMU','NTU', 'Intel-NTU']);
 
 // Portfolio data
 clydeli.Data.Portfolio = [
+{
+	md5_pid: "8850e3fec7af7a71132b22d8e39b1fd8",
+	title: "Sensor Data Visualization",
+	header: "Sensor Data Visualization",
+	status: { active: true, highlighted: false, content_img_offset: 0 },
+	meta_expansion:
+		[ { label: "Team Members", content: "Clyde Li, Yuan Ren, Zhipeng Li" },
+			{ label: "Role", content: "Front-end Design/Implementation" } ],
+	introduction: 'This is an ongoing project as part of the CMU Smart Communities.  It provides web front-end for realtime sensor data visualization.',
+	tags: ["HTML", "CSS", "JS", "web", "project", "CMU"]
+},
+{
+	md5_pid: "f1ff23928d9845eae9b3cd324c8bbfae",
+	title: "CoCoDoJo",
+	header: "CoCoDoJo",
+	status: { active: false, date: "Apr. 2013", highlighted: false, content_img_offset: 0 },
+	links :
+		[ { label: "video", href: "http://www.youtube.com/watch?v=uPRzBykODRE&hd=1" },
+			{ label: "website", href: "http://cocodojo.meteor.com/" } ],
+	meta_expansion:
+		[ { label: "Team Members", content: "Clyde Li, Dan Fortner, Lydian Lee, Sean Xiao, Sky Hu" },
+			{ label: "Role", content: "Code Editor Front-end Design and Synchronization" } ],
+	introduction: 'CoCoDoJo stands for Coding Collaboration DoJo.  This is five-player team outcome of the one-day hackathon "CMU­SV HTML5 Single Page App Hackathon" where CoCoDojo is awarded of both first-prize and most popular app.',
+	tags: ["HTML", "CSS", "JS", "web", "hackathon"]
+},
 {
 	md5_pid: "bdf4c539998cc14284400711b8d4dbc1",
 	title: "DMI Hyperwall",
@@ -95,6 +120,17 @@ clydeli.Data.Portfolio = [
 	tags: ["HTML", "CSS", "JS", "UI", "web", "project", "indie"]
 },
 {
+	md5_pid: "797ab3a6d11c6b032067fc6405ba2d5b",
+	title: "Minimal Register Usage Instruction Scheduling",
+	header: "Minimal Register Usage Instruction Scheduling",
+	status: { active: false, date: "Sep. 2010", highlighted: true, content_img_offset: -128 },
+	meta_expansion:
+		[ { label: "Research Members", content: "Chiang-Nan Lin, and An-Tai Li" },
+			{ label: "Advisor", content: "Professor Chen-Mou Cheng, Ph.D." } ],
+	introduction: 'Surveyed and developed a method to find optimal instruction schedule that used minimal number of registers. By combining backtracking search and constraint programming, we could find optimal solutions for basic blocks with up to about one-hundred and fifty instruction lines, approximately double instruction lines compared to prior research.',
+	tags: ["C++", "algorithm", "research", "NTU"]
+},
+{
 	md5_pid: "c416e2311cc1b57378f9cb33fccd6fd7",
 	title: "Programming with Visual C# 2010 in 16 Lessons",
 	header: "Programming with Visual C# 2010 in 16 Lessons",
@@ -107,17 +143,6 @@ clydeli.Data.Portfolio = [
 	links : [ {label: "博客來", href: "http://www.books.com.tw/exep/prod/booksfile.php?item=0010504523" } ],
 	introduction: 'A book to help beginners learn the lastest version of Microsoft Visual C# development package in 16 lessons. With rich console and windows examples, the book provides solid fundamentals of C# programming and complete project building experience. The book is written in Traditional Chinese.',
 	tags: ["C#", "book", "indie"]
-},
-{
-	md5_pid: "797ab3a6d11c6b032067fc6405ba2d5b",
-	title: "Minimal Register Usage Instruction Scheduling",
-	header: "Minimal Register Usage Instruction Scheduling",
-	status: { active: false, date: "Sep. 2010", highlighted: true, content_img_offset: -128 },
-	meta_expansion:
-		[ { label: "Research Members", content: "Chiang-Nan Lin, and An-Tai Li" },
-			{ label: "Advisor", content: "Professor Chen-Mou Cheng, Ph.D." } ],
-	introduction: 'Surveyed and developed a method to find optimal instruction schedule that used minimal number of registers. By combining backtracking search and constraint programming, we could find optimal solutions for basic blocks with up to about one-hundred and fifty instruction lines, approximately double instruction lines compared to prior research.',
-	tags: ["C++", "algorithm", "research", "NTU"]
 },
 {
 	md5_pid: "f1b56b11aed66ddafc399cee6c2823bc",

@@ -75,14 +75,14 @@ $(document).ready(function(){
 
 	// Portfolio tags settings
 	var tags_list = clydeli.Data.tagsInfo.get_name_type_hash();
-	var first_element = true; // tags reverse hack
+	//var first_element = true; // tags reverse hack
 	for(var key in tags_list){
 		if(tags_list.hasOwnProperty(key)) {
-			if(first_element){
-				$('#portfolio_tags_cloud .portfolio_tags').prepend('<li>'+key+'</li>');
-				first_element = false;
-			}
-			else{ $('#portfolio_tags_cloud .portfolio_tags li:last').after(' <li>'+key+'</li> '); }
+			//if(first_element){
+				$('#portfolio_tags_cloud .portfolio_tags').append(' <li>'+key+'</li> ');
+				//first_element = false;
+			//}
+			//else{ $('#portfolio_tags_cloud .portfolio_tags li:last').after(' <li>'+key+'</li> '); }
 		}
 	}
 

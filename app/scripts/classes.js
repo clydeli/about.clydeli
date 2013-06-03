@@ -24,7 +24,7 @@ clydeli.Type.tags_info = function() {
 };
 clydeli.Type.tags_info.prototype = {
 	insert_type : function(tag_type, tag_color, tags_list){
-		for( var i=0; i < tags_list.length; ++i) {
+		for( var i=0; i<tags_list.length; ++i) {
 			this.name_type_hash[tags_list[i]] = tag_type;
 			this.name_checked_hash[tags_list[i]] = true;
 			this.name_pid_hash[tags_list[i]] = [];

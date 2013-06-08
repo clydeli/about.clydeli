@@ -158,6 +158,7 @@ $(document).ready(function(){
 				$('.portfolio').hide();
 				break;
 		}
+		clydeli.Core.refreshPortfolioMargin();
 	});
 
 	// Pop image triggers

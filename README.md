@@ -10,13 +10,5 @@ This is the source of An-Tai (Clyde) Li's personal webpage, which is maintained 
 Todo
 ---------------------
 
-1. Refactor SCSS
-2. Complete JavaScript modulization
-
-
-Known Issues
----------------------
-
-1. Main frame padding-bottom glitch on Ubuntu Firefox and IE 10.
-
+1. Complete redo...
 

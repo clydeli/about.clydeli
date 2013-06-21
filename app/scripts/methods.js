@@ -49,13 +49,6 @@ clydeli.Core = (function(){
 			}
 		},
 
-		refreshPortfolioMargin = function(){
-			$('#portfolio_tags_cloud').css("margin-bottom", "2048px");
-			var low = 0;
-			if($('.portfolio:visible').last().length > 0 ){ low = $('.portfolio:visible').last().position().top; }
-			$('#portfolio_tags_cloud').css("margin-bottom", low+210-$('#portfolio_tags_cloud').height()+16+"px");
-		},
-
 		refreshPortfolioDisplay = function(){
 			$('.portfolio').each( function(){
 				var should_hide = true;
@@ -68,7 +61,6 @@ clydeli.Core = (function(){
 				if(should_hide){ $(this).hide(); }
 				else{ $(this).show(); }
 			});
-			setTimeout(function(){refreshPortfolioMargin();}, 200);
 		},
 
 
@@ -123,9 +115,6 @@ clydeli.Core = (function(){
 			// Header and Footer
 			$('#main_frame').css('height', $('#bg_frame').height()-20 + 'px');
 
-			// Refresh Portofolio Margin
-			refreshPortfolioMargin();
-
 			// Make right float compatible with 104% scroll hide HACK
 			//$('#misc').css('margin-right', $('#main_frame').width()-$('#bg_frame').width()+16);
 		};
@@ -134,7 +123,6 @@ clydeli.Core = (function(){
 			collapsePortfolio : collapsePortfolio,
 			expandPortfolio : expandPortfolio,
 			filterPortfolioTags : filterPortfolioTags,
-			refreshPortfolioMargin : refreshPortfolioMargin,
 			refreshPortfolioDisplay : refreshPortfolioDisplay,
 			showArea : showArea,
 			bgCropping : bgCropping
